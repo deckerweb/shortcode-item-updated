@@ -29,3 +29,5 @@ Will show only date (as set in WordPress' General Settings)
 - sep = optional separator string, defaults to "@"
 - class = additional custom class for the wrapper
 - wrapper = defaults to "span", but you may also use "div" or even "p" or any other HTML5 wrapper...
+
+Copyright (c) 2015 David Decker - DECKERWEB.de

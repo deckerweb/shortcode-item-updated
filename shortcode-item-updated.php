@@ -24,8 +24,12 @@
  * Copyright (c) 2015 David Decker - DECKERWEB
  */
 
-/** Not a WordPress context? Stop. */
-! defined( 'ABSPATH' ) and exit;
+/*
+ * Exit if called directly.
+ */
+if ( ! defined( 'WPINC' ) ) {
+	die;
+}
 
 
 add_shortcode( 'siu-item-updated', 'ddw_siu_item_updated' );
@@ -75,7 +79,7 @@ function ddw_siu_item_updated( $atts ) {
 	$output = sprintf(
 		'<%1$s class="item-last-updated%2$s">%3$s%4$s</%1$s>',
 		esc_attr( $atts[ 'wrapper' ] ),
-		! empty( $atts[ 'class' ] ) ? esc_attr( $atts[ 'class' ] ) : '',
+		! empty( $atts[ 'class' ] ) ? ' ' . esc_attr( $atts[ 'class' ] ) : '',
 		$date_updated,
 		$time_display
 	);

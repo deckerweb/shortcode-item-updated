@@ -10,7 +10,7 @@ Shortcode for showing the last updated date (and/or time) of an item of a post t
 
 Will show only date (as set in WordPress' General Settings)
 
-** Example - custom:**
+**Example - custom:**
 
 ```
 [siu-item-updated post_id="363" show_time="yes" show_sep="yes"]
@@ -19,7 +19,7 @@ Will show only date (as set in WordPress' General Settings)
 - Will also show the time
 - Will show a "separator" string between date and time values (sep)
 
-**Parameters:**
+### Parameters:
 
 - post_id = ID of the post of any (public) post type
 - date_format = PHP date format (defaults to "General Settings")

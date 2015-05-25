@@ -1,17 +1,17 @@
 <?php # -*- coding: utf-8 -*-
 /**
  * Main plugin file.
- * @package     Shortcode Item Updated
- * @author      David Decker
- * @copyright   Copyright (c) 2015, David Decker - DECKERWEB
- * @license     GPL-2.0+
- * @link        http://deckerweb.de/twitter
+ * @package           Shortcode Item Updated
+ * @author            David Decker
+ * @copyright         Copyright (c) 2015, David Decker - DECKERWEB
+ * @license           GPL-2.0+
+ * @link              http://deckerweb.de/twitter
  *
  * @wordpress-plugin
  * Plugin Name:       Shortcode Item Updated
  * Plugin URI:        https://github.com/deckerweb/shortcode-item-updated
  * Description:       Shortcode for showing the last updated date (and/or time) of an item of a post type.
- * Version:           2015.05.25
+ * Version:           2015.05.26
  * Author:            David Decker - DECKERWEB
  * Author URI:        http://deckerweb.de/
  * License:           GPL-2.0+
@@ -33,7 +33,7 @@ add_shortcode( 'siu-item-updated', 'ddw_siu_item_updated' );
  * Shortcode for showing the last updated date (and/or time) of an item of a post type.
  * NOTE: Requires the ID of the post type item.
  *
- * @since  1.0.0
+ * @since  2015.05.25
  *
  * @uses   shortcode_atts()
  *
@@ -45,7 +45,7 @@ function ddw_siu_item_updated( $atts ) {
 
 	/** Set default shortcode attributes */
 	$defaults = array(
-		'post_id'     => '',
+		'post_id'     => get_the_ID(),
 		'date_format' => get_option( 'date_format' ),
 		'time_format' => get_option( 'time_format' ),
 		'show_time'   => 'no',

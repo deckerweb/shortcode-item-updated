@@ -5,12 +5,20 @@ Shortcode for showing the last updated date (and/or time) of an item of a post t
 **Example - default:**
 
 ```
+[siu-item-updated]
+```
+
+Will show only date (as set in WordPress' General Settings) for the current displayed post (ID pulled via "get_the_ID()") - has to be used within the Loop in this default state.
+
+**Example - custom I:**
+
+```
 [siu-item-updated post_id="363"]
 ```
 
-Will show only date (as set in WordPress' General Settings)
+Will show only date (as set in WordPress' General Settings) for the item of a post type with post ID "363"
 
-**Example - custom:**
+**Example - custom II:**
 
 ```
 [siu-item-updated post_id="363" show_time="yes" show_sep="yes"]
@@ -21,7 +29,7 @@ Will show only date (as set in WordPress' General Settings)
 
 ### Parameters:
 
-- post_id = ID of the post of any (public) post type
+- post_id = ID of the post of any (public) post type (defaults to ID of the current displayed post -- in this case, Shortcode has to be used within the Loop!)
 - date_format = PHP date format (defaults to "General Settings")
 - time_format = PHP time format (defaults to "General Settings")
 - show_time = "yes" will display time also (defaults to "no")

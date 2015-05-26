@@ -1,6 +1,22 @@
 # Shortcode Item Updated
 
+* Contributors: [David Decker](https://github.com/deckerweb), [contributors](https://github.com/deckerweb/shortcode-item-updated/graphs/contributors)
+* Tags: shortcode, updated, last updated, date, time, item, post type, custom post types, post, element
+* Requires at least: 3.6
+* Tested up to: 4.2.x
+* Stable tag: master
+* Donate link: http://ddwb.me/9s
+* License: GPL-2.0+
+* License URI: http://www.opensource.org/licenses/gpl-license.php
+
 Shortcode for showing the last updated date (and/or time) of an item of a post type.
+
+
+## Description:
+
+Very useful to output the updated date of a custom post type item on a regular page, within a widget or anywhere else... :-)
+
+*Backstory:* I needed something like that for a client project to display the last updated date/time of a download post type on a regular content page. Since I knew, I would need the same functionality for an other existing site and maybe in future too, I just build it into a "general plugin" rather than a simple code snippet...! There were no existing plugins/solutions out there (at least I didn't found them yet...) that fitted my needs so I had to build it myself...
 
 
 ## Plugin Installation:

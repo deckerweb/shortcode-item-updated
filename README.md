@@ -15,7 +15,7 @@ Shortcode for showing the last updated date (and/or time) of an item of a post t
 * Install & activate the "GitHub Updater" plugin, get from here: [https://github.com/afragen/github-updater](https://github.com/afragen/github-updater)
 * Recommended: set your API Token in the plugin's settings
 * Go to "Settings > GitHub Updater > Install Plugin"
-* Paste the GitHub URL "https://github.com/deckerweb/shortcode-item-updated"
+* Paste the GitHub URL `https://github.com/deckerweb/shortcode-item-updated`
 * Install & activate the plugin
 
 **Updates**
@@ -76,7 +76,7 @@ Will show only date (as set in WordPress Settings > General) for the item of a p
 ### Template Usage (Developers):
 
 * Use WordPress' global "do_shortcode()" function as a template function, like so:
-* do_shortcode( '[siu-item-updated post_id="123" show_label="yes"]' ); --> parameters apply like for regular Shortcode usage!
+* `do_shortcode( '[siu-item-updated post_id="123" show_label="yes"]' );` --> parameters apply like for regular Shortcode usage!
 * NOTE: You have to provide a unique post ID if using this outside of the Loop!
 
 

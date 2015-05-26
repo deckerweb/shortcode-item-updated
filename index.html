@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Shortcode-item-updated by deckerweb</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Shortcode-item-updated</h1>
+      <h2 class="project-tagline">A simple plugin for WordPress: Shortcode for showing the last updated date (and/ or time) of an item of a post type. Very useful to output the updated date of a custom post type item on a regular page, within a widget or anywhere else... :-)</h2>
+      <a href="https://github.com/deckerweb/shortcode-item-updated" class="btn">View on GitHub</a>
+      <a href="https://github.com/deckerweb/shortcode-item-updated/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/deckerweb/shortcode-item-updated/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="shortcode-item-updated" class="anchor" href="#shortcode-item-updated" aria-hidden="true"><span class="octicon octicon-link"></span></a>Shortcode Item Updated</h1>
+
+<p>Shortcode for showing the last updated date (and/or time) of an item of a post type.</p>
+
+<h2>
+<a id="plugin-installation" class="anchor" href="#plugin-installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Plugin Installation:</h2>
+
+<p><strong>Manual Upload</strong></p>
+
+<ul>
+<li>download current .zip archive from master branch here, URL: <a href="https://github.com/deckerweb/shortcode-item-updated/archive/master.zip">https://github.com/deckerweb/shortcode-item-updated/archive/master.zip</a>
+</li>
+<li>unzip the package, then <strong>rename the folder to <code>shortcode-item-updated</code></strong>, then upload renamed folder via FTP to your WordPress plugin directory</li>
+<li>activate the plugin</li>
+</ul>
+
+<p><strong>Via "GitHub Updater" Plugin</strong> <em>(recommended!)</em></p>
+
+<ul>
+<li>Install &amp; activate the "GitHub Updater" plugin, get from here: <a href="https://github.com/afragen/github-updater">https://github.com/afragen/github-updater</a>
+</li>
+<li>Recommended: set your API Token in the plugin's settings</li>
+<li>Go to "Settings &gt; GitHub Updater &gt; Install Plugin"</li>
+<li>Paste the GitHub URL <code>https://github.com/deckerweb/shortcode-item-updated</code> in the "Plugin URI" field (branch "master" is pre-set), then hit the "Install Plugin" button there</li>
+<li>Install &amp; activate the plugin</li>
+</ul>
+
+<p><strong>Updates</strong></p>
+
+<ul>
+<li>Are done via the plugin "GitHub Updater" (see above) - leveraging the default WordPress update system!</li>
+<li>Setting your GitHub API Token is recommended! :)</li>
+</ul>
+
+<h2>
+<a id="usage---examples" class="anchor" href="#usage---examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage - Examples:</h2>
+
+<p><strong>Example - default:</strong></p>
+
+<pre><code>[siu-item-updated]
+</code></pre>
+
+<p>Will show only date (as set in WordPress Settings &gt; General) for the current displayed post (ID pulled via <code>get_the_ID()</code>) - has to be used within the Loop in this default state.</p>
+
+<p><strong>Example - custom 1:</strong></p>
+
+<pre><code>[siu-item-updated post_id="363"]
+</code></pre>
+
+<p>Will show only date (as set in WordPress Settings &gt; General) for the item of a post type with post ID "363"</p>
+
+<p><strong>Example - custom 2:</strong></p>
+
+<pre><code>[siu-item-updated post_id="363" show_time="yes" show_sep="yes"]
+</code></pre>
+
+<ul>
+<li>Will also show the time</li>
+<li>Will show a "separator" string between date and time values (sep)</li>
+</ul>
+
+<h2>
+<a id="shortcode-parameters" class="anchor" href="#shortcode-parameters" aria-hidden="true"><span class="octicon octicon-link"></span></a>Shortcode Parameters:</h2>
+
+<table>
+<thead>
+<tr>
+<th align="center">Parameter</th>
+<th align="left">Description</th>
+<th align="center">Default</th>
+<th align="center">Translateable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>post_id</code></td>
+<td align="left">ID of the post of any (public) post type</td>
+<td align="center">
+<code>get_the_ID()</code> = ID of the current displayed post -- in this case, Shortcode has to be used within the Loop!)</td>
+<td align="center">--</td>
+</tr>
+<tr>
+<td align="center"><code>date_format</code></td>
+<td align="left">PHP date format</td>
+<td align="center">setting as in WordPress Settings &gt; General</td>
+<td align="center">(automatically via <code>date_i18n()</code> )</td>
+</tr>
+<tr>
+<td align="center"><code>time_format</code></td>
+<td align="left">PHP time format</td>
+<td align="center">setting as in WordPress Settings &gt; General</td>
+<td align="center">(automatically via <code>date_i18n()</code> )</td>
+</tr>
+<tr>
+<td align="center"><code>show_date</code></td>
+<td align="left">will display updated date, by default visible!</td>
+<td align="center"><code>yes</code></td>
+<td align="center">--</td>
+</tr>
+<tr>
+<td align="center"><code>show_time</code></td>
+<td align="left">
+<code>yes</code> will display time also</td>
+<td align="center"><code>no</code></td>
+<td align="center">--</td>
+</tr>
+<tr>
+<td align="center"><code>show_sep</code></td>
+<td align="left">
+<code>yes</code> will display separator string</td>
+<td align="center"><code>no</code></td>
+<td align="center">--</td>
+</tr>
+<tr>
+<td align="center"><code>sep</code></td>
+<td align="left">optional separator string</td>
+<td align="center">
+<code>&amp;#x00A0;@</code> (that is a space plus @-symbol, like so: " @")</td>
+<td align="center">yes!</td>
+</tr>
+<tr>
+<td align="center"><code>show_label</code></td>
+<td align="left">
+<code>yes</code> will display a label string before date &amp; time values</td>
+<td align="center"><code>no</code></td>
+<td align="center">--</td>
+</tr>
+<tr>
+<td align="center"><code>label_before</code></td>
+<td align="left">label string before date &amp; time values</td>
+<td align="center">
+<code>Last updated:</code> (by default not shown)</td>
+<td align="center">yes!</td>
+</tr>
+<tr>
+<td align="center"><code>label_after</code></td>
+<td align="left">label string after time value -- useful for languages like German to get time values like "9.40 Uhr" (see the "Uhr" string)</td>
+<td align="center">"" (not displayed)</td>
+<td align="center">--</td>
+</tr>
+<tr>
+<td align="center"><code>class</code></td>
+<td align="left">additional custom class for the wrapper</td>
+<td align="center">"" (none)</td>
+<td align="center">--</td>
+</tr>
+<tr>
+<td align="center"><code>wrapper</code></td>
+<td align="left">HTML wrapper element - any HTML5 wrapper is possible</td>
+<td align="center"><code>span</code></td>
+<td align="center">--</td>
+</tr>
+</tbody>
+</table>
+
+<h2>
+<a id="widget-usage" class="anchor" href="#widget-usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Widget Usage:</h2>
+
+<ul>
+<li>Shortcode could be used with "Text" widget -- if you have shortcodes for Widgets activated (possible via this filter: <code>add_filter( 'widget_text', 'do_shortcode' );</code> )</li>
+<li>If using extended/ advanced text widget plugins, the Shortcode usage then is already enabled automatically... :-)</li>
+<li>NOTE: You have to provide a unique post ID if using this outside of the Loop!</li>
+</ul>
+
+<h2>
+<a id="template-usage-developers" class="anchor" href="#template-usage-developers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Template Usage (Developers):</h2>
+
+<ul>
+<li>Use WordPress' global "do_shortcode()" function as a template function, like so:</li>
+<li>
+<code>&lt;?php do_shortcode( '[siu-item-updated post_id="123" show_label="yes"]' ); ?&gt;</code> --&gt; parameters apply like for regular Shortcode usage (see above)!</li>
+<li>NOTE: You have to provide a unique post ID if using this outside of the Loop!</li>
+</ul>
+
+<h2>
+<a id="plugin-filters-developers" class="anchor" href="#plugin-filters-developers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Plugin Filters (Developers):</h2>
+
+<ul>
+<li>
+<code>siu_filter_shortcode_defaults</code> --&gt; filter default values of Shortcode parameters</li>
+<li>
+<code>siu_filter_shortcode_item_updated</code> --&gt; filter Shortcode output</li>
+<li>
+<code>shortcode_atts_siu-item-updated</code> --&gt; lets you add new Shortcode parameters for example (= WordPress' default Shortcode filter <code>shortcode_atts_{$shortcode}</code> )</li>
+</ul>
+
+<h2>
+<a id="translations" class="anchor" href="#translations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Translations:</h2>
+
+<ul>
+<li>Used textdomain: <code>shortcode-item-updated</code>
+</li>
+<li>Default <code>.pot</code> file included</li>
+<li>German translations included (<code>de_DE</code>)</li>
+<li>Currently translateable are the plugin title, plugin description, label before string and the separator string</li>
+<li>Plugin's own path for translations: <code>wp-content/plugins/shortcode-item-updated/languages/shortcode-item-updated-de_DE.mo</code>
+</li>
+<li>
+<em>Recommended:</em> Global WordPress lang dir path for translations: <code>wp-content/languages/plugins/shortcode-item-updated-de_DE.mo</code> ---&gt; <em>NOTE: if this file/path exists it will be loaded at higher priority than the plugin path! This is the recommended path &amp; way to store your translations as it is update-safe and allows for custom translations!</em>
+</li>
+<li>Recommended translation tools: <em>Poedit Pro v1.8+</em> or <em>WordPress Plugin "Loco Translate"</em> or <em>your IDE/ Code Editor</em> or <em>old WordPress "Codestyling Localization"</em> (for the brave who know what they are doing :) )</li>
+</ul>
+
+<h2>
+<a id="changelog" class="anchor" href="#changelog" aria-hidden="true"><span class="octicon octicon-link"></span></a>Changelog:</h2>
+
+<p>See plugin file <a href="https://github.com/deckerweb/shortcode-item-updated/blob/master/CHANGES.md">CHANGES.md here</a></p>
+
+<p>Copyright (c) 2015 David Decker - DECKERWEB.de</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/deckerweb/shortcode-item-updated">Shortcode-item-updated</a> is maintained by <a href="https://github.com/deckerweb">deckerweb</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
+

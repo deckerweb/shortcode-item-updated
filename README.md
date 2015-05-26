@@ -6,7 +6,7 @@ Shortcode for showing the last updated date (and/or time) of an item of a post t
 ## Plugin Installation:
 
 **Manual Upload**
-* download current .zip archive from master branch here
+* download current .zip archive from master branch here, URL: [https://github.com/deckerweb/shortcode-item-updated/archive/master.zip](https://github.com/deckerweb/shortcode-item-updated/archive/master.zip)
 * unzip the package, rename the folder to "shortcode-item-updated", upload via FTP to the plugin folder
 * activate the plugin
 

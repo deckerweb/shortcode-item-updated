@@ -62,7 +62,7 @@ Will show only date (as set in WordPress Settings > General) for the item of a p
 | `show_time` | `yes` will display time also | `no` | -- |
 | `show_sep` | `yes` will display separator string | `no` | -- |
 | `sep` | optional separator string | `&#x00A0;@` (that is a space plus @-symbol, like so: " @") | yes! |
-| `show_label` | `yes` will display a label string before date & time values | no | -- |
+| `show_label` | `yes` will display a label string before date & time values | `no` | -- |
 | `label_before` | label string before date & time values | `Last updated:` (by default not shown) | yes! |
 | `label_after` | label string after time value -- useful for languages like German to get time values like "9.40 Uhr" (see the "Uhr" string) | "" (not displayed) | -- |
 | `class` | additional custom class for the wrapper | "" (none) | -- |
@@ -99,5 +99,10 @@ Will show only date (as set in WordPress Settings > General) for the item of a p
 * Plugin's own path for translations: `wp-content/plugins/shortcode-item-updated/languages/shortcode-item-updated-de_DE.mo`
 * *Recommended:* Global WordPress lang dir path for translations: `wp-content/languages/plugins/shortcode-item-updated-de_DE.mo` ---> *NOTE: if this file/path exists it will be loaded at higher priority than the plugin path! This is the recommended path & way to store your translations as it is update-safe and allows for custom translations!*
 * Recommended translation tools: *Poedit Pro v1.8+* or *WordPress Plugin "Loco Translate"* or *your IDE/ Code Editor* or *old WordPress "Codestyling Localization"* (for the brave who know what they are doing :) )
+
+
+## Changelog:
+
+See plugin file [CHANGES.md here](https://github.com/deckerweb/shortcode-item-updated/blob/master/CHANGES.md)
 
 Copyright (c) 2015 David Decker - DECKERWEB.de

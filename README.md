@@ -15,7 +15,7 @@ Shortcode for showing the last updated date (and/or time) of an item of a post t
 * Install & activate the "GitHub Updater" plugin, get from here: [https://github.com/afragen/github-updater](https://github.com/afragen/github-updater)
 * Recommended: set your API Token in the plugin's settings
 * Go to "Settings > GitHub Updater > Install Plugin"
-* Paste the GitHub URL `https://github.com/deckerweb/shortcode-item-updated`
+* Paste the GitHub URL `https://github.com/deckerweb/shortcode-item-updated` in the "Plugin URI" field (branch "master" is pre-set), then hit the "Install Plugin" button there
 * Install & activate the plugin
 
 **Updates**

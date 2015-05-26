@@ -50,7 +50,7 @@ function ddw_siu_load_translations() {
 	$locale = apply_filters( 'plugin_locale', get_locale(), $siu_textdomain );
 
 	/** Set filter for WordPress languages directory */
-	$gwnf_wp_lang_dir = apply_filters(
+	$siu_wp_lang_dir = apply_filters(
 		'siu_filter_wp_lang_dir',
 		trailingslashit( WP_LANG_DIR ) . 'plugins/' . $siu_textdomain . '-' . $locale . '.mo'
 	);

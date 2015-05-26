@@ -1,5 +1,7 @@
 #### Version 2015-05-26
 
+* Bugfix for variable name in translation loader
+* Refined Shortcode parameters
 * Added label "Last updated:" (defaults to not being shown!)
 * Made separator string translateable (makes sense for a lot of languages to have a "sane default" then)
 * Added translations to the plugin; plus default .pot file and German translations

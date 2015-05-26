@@ -2,6 +2,27 @@
 
 Shortcode for showing the last updated date (and/or time) of an item of a post type.
 
+
+## Plugin Installation:
+
+**Manual Upload**
+* download current .zip archive from master branch here
+* unzip the package, rename the folder to "shortcode-item-updated", upload via FTP to the plugin folder
+* activate the plugin
+
+**Via "GitHub Updater" Plugin**
+
+* Install & activate the "GitHub Updater" plugin, get from here: [https://github.com/afragen/github-updater](https://github.com/afragen/github-updater)
+* Recommended: set your API Token in the plugin's settings
+* Go to "Settings > GitHub Updater > Install Plugin"
+* Paste the GitHub URL "https://github.com/deckerweb/shortcode-item-updated"
+* Install & activate the plugin
+
+**Updates**
+* Are done via the plugin "GitHub Updater" (see above) - leveraging the default WordPress update system!
+* Setting your GitHub API Token is recommended! :)
+
+
 ### Usage - Examples:
 
 **Example - default:**
@@ -10,7 +31,7 @@ Shortcode for showing the last updated date (and/or time) of an item of a post t
 [siu-item-updated]
 ```
 
-Will show only date (as set in WordPress Settings > General) for the current displayed post (ID pulled via "get_the_ID()") - has to be used within the Loop in this default state.
+Will show only date (as set in WordPress Settings > General) for the current displayed post (ID pulled via `get_the_ID()`) - has to be used within the Loop in this default state.
 
 **Example - custom 1:**
 
@@ -29,19 +50,21 @@ Will show only date (as set in WordPress Settings > General) for the item of a p
 - Will also show the time
 - Will show a "separator" string between date and time values (sep)
 
+
 ### Shortcode Parameters:
 
-- post_id = ID of the post of any (public) post type (defaults to ID of the current displayed post -- in this case, Shortcode has to be used within the Loop!)
-- date_format = PHP date format (defaults to setting as in WordPress Settings > General)
-- time_format = PHP time format (defaults to setting as in WordPress Settings > General)
-- show_time = "yes" will display time also (defaults to "no")
-- show_sep = "yes" will display separator string (defaults to "no")
-- sep = optional separator string, defaults to "&#x00A0;@" (that is a space plus @-symbol, like so: " @") -- is translateable!
-- show_label = "yes" will display a label string before date & time values (defaults to "no")
-- label_before = label string before date & time values, defaults to "Last updated:" (by default not shown) -- is translateable!
-- label_after = label string after time value, defaults to "" (not displayed) - useful for languages like German to get time values like "9.40 Uhr" (see the "Uhr" string)
-- class = additional custom class for the wrapper
-- wrapper = defaults to "span", but you may also use "div" or even "p" or any other HTML5 wrapper...
+- `post_id` = ID of the post of any (public) post type (defaults to ID of the current displayed post -- in this case, Shortcode has to be used within the Loop!)
+- `date_format` = PHP date format (defaults to setting as in WordPress Settings > General)
+- `time_format` = PHP time format (defaults to setting as in WordPress Settings > General)
+- `show_time` = `yes` will display time also (defaults to "no")
+- `show_sep` = `yes` will display separator string (defaults to "no")
+- `sep` = optional separator string, defaults to `&#x00A0;@` (that is a space plus @-symbol, like so: " @") -- is translateable!
+- `show_label` = `yes` will display a label string before date & time values (defaults to "no")
+- `label_before` = label string before date & time values, defaults to `Last updated:` (by default not shown) -- is translateable!
+- `label_after` = label string after time value, defaults to "" (not displayed) - useful for languages like German to get time values like "9.40 Uhr" (see the "Uhr" string)
+- `class` = additional custom class for the wrapper
+- `wrapper` = defaults to `span`, but you may also use `div` or even `p` or any other HTML5 wrapper element...
+
 
 ### Widget Usage:
 
@@ -49,17 +72,20 @@ Will show only date (as set in WordPress Settings > General) for the item of a p
 * If using extended/ advanced text widget plugins, the Shortcode usage then is already enabled automatically... :-)
 * NOTE: You have to provide a unique post ID if using this outside of the Loop!
 
+
 ### Template Usage (Developers):
 
 * Use WordPress' global "do_shortcode()" function as a template function, like so:
 * do_shortcode( '[siu-item-updated post_id="123" show_label="yes"]' ); --> parameters apply like for regular Shortcode usage!
 * NOTE: You have to provide a unique post ID if using this outside of the Loop!
 
+
 ### Plugin Filters (Developers):
 
 * `siu_filter_shortcode_defaults` --> filter default values of Shortcode parameters
 * `siu_filter_shortcode_item_updated` --> filter Shortcode output
 * `shortcode_atts_siu-item-updated` --> lets you add new Shortcode parameters for example (= WordPress' default Shortcode filter `shortcode_atts_{$shortcode}` )
+
 
 ### Translations:
 

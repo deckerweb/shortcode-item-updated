@@ -1,0 +1,57 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Shortcode Item Updated\n"
+"POT-Creation-Date: 2015-05-26 09:56+0100\n"
+"PO-Revision-Date: 2015-05-26 09:58+0100\n"
+"Last-Translator: David Decker DECKERWEB.de -- http://deckerweb.de/\n"
+"Language-Team: David Decker DECKERWEB.de -- http://deckerweb.de/\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: shortcode-item-updated.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: de_DE\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: shortcode-item-updated.php:100
+msgctxt ""
+"Translators: separator string between date and time values (a space plus @ "
+"symbol)"
+msgid "&#x00A0;@"
+msgstr ", um"
+
+#: shortcode-item-updated.php:107
+msgctxt "Translators: Text before date/ time"
+msgid "Last updated:"
+msgstr "Zuletzt aktualisiert:"
+
+#. Plugin Name of the plugin/theme
+msgid "Shortcode Item Updated"
+msgstr "Sportcode Element zuletzt aktualisiert"
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/deckerweb/shortcode-item-updated"
+msgstr "https://github.com/deckerweb/shortcode-item-updated"
+
+#. Description of the plugin/theme
+msgid ""
+"Shortcode for showing the last updated date (and/or time) of an item of a "
+"post type."
+msgstr ""
+"Sportcode, um das Datum (und/ oder die Zeit) der letzten Aktualisierung "
+"eines Elements von einem Inhaltstyp anzeigen zu lassen."
+
+#. Author of the plugin/theme
+msgid "David Decker - DECKERWEB"
+msgstr "David Decker - DECKERWEB.de"
+
+#. Author URI of the plugin/theme
+msgid "http://deckerweb.de/"
+msgstr "http://deckerweb.de/"

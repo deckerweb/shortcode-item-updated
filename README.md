@@ -7,10 +7,10 @@ Shortcode for showing the last updated date (and/or time) of an item of a post t
 
 **Manual Upload**
 * download current .zip archive from master branch here, URL: [https://github.com/deckerweb/shortcode-item-updated/archive/master.zip](https://github.com/deckerweb/shortcode-item-updated/archive/master.zip)
-* unzip the package, rename the folder to "shortcode-item-updated", upload via FTP to the plugin folder
+* unzip the package, then **rename the folder to `shortcode-item-updated`**, then upload renamed folder via FTP to your WordPress plugin directory
 * activate the plugin
 
-**Via "GitHub Updater" Plugin**
+**Via "GitHub Updater" Plugin** *(recommended!)*
 
 * Install & activate the "GitHub Updater" plugin, get from here: [https://github.com/afragen/github-updater](https://github.com/afragen/github-updater)
 * Recommended: set your API Token in the plugin's settings
@@ -79,7 +79,7 @@ Will show only date (as set in WordPress Settings > General) for the item of a p
 ## Template Usage (Developers):
 
 * Use WordPress' global "do_shortcode()" function as a template function, like so:
-* `do_shortcode( '[siu-item-updated post_id="123" show_label="yes"]' );` --> parameters apply like for regular Shortcode usage!
+* `<?php do_shortcode( '[siu-item-updated post_id="123" show_label="yes"]' ); ?>` --> parameters apply like for regular Shortcode usage (see above)!
 * NOTE: You have to provide a unique post ID if using this outside of the Loop!
 
 
@@ -92,11 +92,12 @@ Will show only date (as set in WordPress Settings > General) for the item of a p
 
 ## Translations:
 
-* textdomain: `shortcode-item-updated`
-* default `.pot` file included
+* Used textdomain: `shortcode-item-updated`
+* Default `.pot` file included
 * German translations included (`de_DE`)
-* translateable are the plugin title, plugin description, label before string and the separator string
-* plugin path for translations: `wp-content/plugins/shortcode-item-updated/languages/shortcode-item-updated-de_DE.mo`
-* global WordPress lang dir path for translations: `wp-content/languages/plugins/shortcode-item-updated-de_DE.mo` ---> NOTE: if this file/path exists it will be loaded at higher priority than the plugin path! This is the recommended path & way to store your translations!
+* Currently translateable are the plugin title, plugin description, label before string and the separator string
+* Plugin's own path for translations: `wp-content/plugins/shortcode-item-updated/languages/shortcode-item-updated-de_DE.mo`
+* *Recommended:* Global WordPress lang dir path for translations: `wp-content/languages/plugins/shortcode-item-updated-de_DE.mo` ---> *NOTE: if this file/path exists it will be loaded at higher priority than the plugin path! This is the recommended path & way to store your translations as it is update-safe and allows for custom translations!*
+* Recommended translation tools: *Poedit Pro v1.8+* or *WordPress Plugin "Loco Translate"* or *your IDE/ Code Editor* or *old WordPress "Codestyling Localization"* (for the brave who know what they are doing :) )
 
 Copyright (c) 2015 David Decker - DECKERWEB.de

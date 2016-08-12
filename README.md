@@ -84,6 +84,11 @@ Will show only date (as set in WordPress Settings > General) for the item of a p
 | `class` | additional custom class for the wrapper | "" (none) | -- |
 | `wrapper` | HTML wrapper element - any HTML5 wrapper is possible | `span` | -- |
 
+## Shortcode Parameters - Bonus Shortcuts:
+
+* Shortcut for German date format to get output `d.m.Y` like `12.08.2016` (Usage: `date_format="de"`)
+* Shortcut for U.S. date format to get output `Y-m-d` like `2016-08-12` (Usage: `date_format="us"`)
+
 
 ## Widget Usage:
 
@@ -104,6 +109,7 @@ Will show only date (as set in WordPress Settings > General) for the item of a p
 * `siu_filter_shortcode_defaults` --> filter default values of Shortcode parameters
 * `siu_filter_shortcode_item_updated` --> filter Shortcode output
 * `shortcode_atts_siu-item-updated` --> lets you add new Shortcode parameters for example (= WordPress' default Shortcode filter `shortcode_atts_{$shortcode}` )
+* `siu_filter_shortcode_ui_args` --> filter arguments for Shortcode UI (Shortcake plugin)
 
 
 ## Translations:

@@ -3,7 +3,7 @@
  * Main plugin file.
  * @package           Shortcode Item Updated
  * @author            David Decker
- * @copyright         Copyright (c) 2015, David Decker - DECKERWEB
+ * @copyright         Copyright (c) 2015-2016, David Decker - DECKERWEB
  * @license           GPL-2.0+
  * @link              http://deckerweb.de/twitter
  *
@@ -11,7 +11,7 @@
  * Plugin Name:       Shortcode Item Updated
  * Plugin URI:        https://github.com/deckerweb/shortcode-item-updated
  * Description:       Shortcode for showing the last updated date (and/or time) of an item of a post type.
- * Version:           2015.05.26
+ * Version:           2016.08.12
  * Author:            David Decker - DECKERWEB
  * Author URI:        http://deckerweb.de/
  * License:           GPL-2.0+
@@ -21,7 +21,7 @@
  * GitHub Plugin URI: https://github.com/deckerweb/shortcode-item-updated
  * GitHub Branch:     master
  *
- * Copyright (c) 2015 David Decker - DECKERWEB
+ * Copyright (c) 2015-2016 David Decker - DECKERWEB
  */
 
 /*
@@ -124,6 +124,17 @@ function ddw_siu_item_updated( $atts ) {
 	$date_updated   = date_i18n( esc_attr( $atts[ 'date_format' ] ), $date_converted );
 	$time_updated   = date_i18n( esc_attr( $atts[ 'time_format' ] ), $date_converted );
 
+	/** Bonus: Shortcuts for typical German and U.S. date formats */
+	if ( 'us' === strtolower( esc_attr( $atts[ 'date_format' ] ) ) ) {
+
+		$date_updated = date_i18n( 'Y-m-d' );
+
+	} elseif ( 'de' === strtolower( esc_attr( $atts[ 'date_format' ] ) ) ) {
+
+		$date_updated = date_i18n( 'd.m.Y' );
+
+	}  // end if
+
 	/** Prepare time display */
 	$time_display = sprintf(
 		'%1$s%2$s%3$s',
@@ -144,5 +155,168 @@ function ddw_siu_item_updated( $atts ) {
 
 	/** Return the output - filterable */
 	return apply_filters( 'siu_filter_shortcode_item_updated', $output, $atts );
+
+}  // end function
+
+
+add_action( 'init', 'ddw_siu_prepare_shortcode_ui' );
+/**
+ * If plugin Shortcake is active, load our support for it.
+ *
+ * @since 2016.08.12
+ */
+function ddw_siu_prepare_shortcode_ui() {
+
+	/** Check if Shortcake exists */
+    if ( ! function_exists( 'shortcode_ui_register_for_shortcode' ) ) {
+
+        return;
+
+    }  // end if
+
+    /** Only create the UI when in the admin */
+    if ( ! is_admin() ) {
+
+        return;
+
+    }  // end if
+
+    /** Load Shortcode UI registering */
+	add_action( 'register_shortcode_ui', 'ddw_siu_register_shortcode_for_ui' );
+
+}  // end function
+
+
+/**
+ * Shortcode UI setup for Shortcake plugin (Shortcode UI).
+ *
+ * @since  2016.08.12
+ *
+ * @uses   shortcode_ui_register_for_shortcode()
+ *
+ * @return array Array with Shortcode UI arguments.
+ */
+function ddw_siu_register_shortcode_for_ui() {
+
+	$shortcode_ui_args = array(
+		/** General setup for the Shortcode UI */
+		'label'         => esc_html__( 'Item last updated', 'shortcode-item-updated' ),
+		//'add_button'    => 'icon_only',
+		'listItemImage' => 'dashicons-backup',
+		/** Arguments for the Shortcode attributes */
+		'attrs'         => array(
+			array(
+				'label' => esc_html__( 'Date format', 'shortcode-item-updated' ),
+				'attr'  => 'date_format',
+				'type'  => 'text',
+				'meta'  => array(
+					'placeholder' => get_option( 'date_format' ),
+				),
+				'description' => esc_html__( 'Uses the PHP date format schema', 'shortcode-item-updated' ),
+			),
+			array(
+				'label' => esc_html__( 'Time format', 'shortcode-item-updated' ),
+				'attr'  => 'time_format',
+				'type'  => 'text',
+				'meta'  => array(
+					'placeholder' => get_option( 'time_format' ),
+				),
+				'description' => esc_html__( 'Uses the PHP time format schema', 'shortcode-item-updated' ),
+			),
+			array(
+				'label'   => esc_html__( 'Show date?', 'shortcode-item-updated' ),
+				'attr'    => 'show_date',
+				'type'    => 'select',
+				'options' => array(
+								'yes' => esc_html__( 'Yes', 'shortcode-item-updated' ),
+								'no'  => esc_html__( 'No', 'shortcode-item-updated' ),
+				),
+			),
+			array(
+				'label'   => esc_html__( 'Show time?', 'shortcode-item-updated' ),
+				'attr'    => 'show_time',
+				'type'    => 'select',
+				'options' => array(
+								'no'  => esc_html__( 'No', 'shortcode-item-updated' ),
+								'yes' => esc_html__( 'Yes', 'shortcode-item-updated' ),
+				),
+				'description' => esc_html__( 'Optional time of last update', 'shortcode-item-updated' ),
+			),
+			array(
+				'label'   => esc_html__( 'Show separator?', 'shortcode-item-updated' ),
+				'attr'    => 'show_sep',
+				'type'    => 'select',
+				'options' => array(
+								'no'  => esc_html__( 'No', 'shortcode-item-updated' ),
+								'yes' => esc_html__( 'Yes', 'shortcode-item-updated' ),
+				),
+				'description' => esc_html__( 'Whether to show some string between date and time values', 'shortcode-item-updated' ),
+			),
+			array(
+				'label'       => esc_html__( 'Separator string/ character', 'shortcode-item-updated' ),
+				'attr'        => 'sep',
+				'type'        => 'text',
+				/* translators: separator string between date and time values (a space plus @ symbol) */
+				'placeholder' => _x(
+					'&#x00A0;@',
+					'Translators: separator string between date and time values (a space plus @ symbol)',
+					'shortcode-item-updated'
+				),
+				'description' => esc_html__( 'What is output between date and time strings', 'shortcode-item-updated' ),
+			),
+			array(
+				'label'    => esc_html__( 'Show label?', 'shortcode-item-updated' ),
+				'attr'     => 'show_label',
+				'type'    => 'select',
+				'options' => array(
+								'no'  => esc_html__( 'No', 'shortcode-item-updated' ),
+								'yes' => esc_html__( 'Yes', 'shortcode-item-updated' ),
+				),
+				'description' => esc_html__( 'Whether to show label before date', 'shortcode-item-updated' ),
+			),
+			array(
+				'label'  => esc_html__( 'Label before', 'shortcode-item-updated' ),
+				'attr'   => 'label_before',
+				'type'   => 'text',
+				'meta'   => array(
+					/* translators: HTML placeholder */
+					'placeholder' => esc_html( _x(
+						'Last updated:',
+						'Translators: HTML placeholder',
+						'shortcode-item-updated'
+					) ),
+				),
+				'description' => esc_html__( 'Optional label output at the beginning', 'shortcode-item-updated' ),
+			),
+			array(
+				'label'  => esc_html__( 'Label after', 'shortcode-item-updated' ),
+				'attr'   => 'label_after',
+				'type'   => 'text',
+				'meta'   => array(
+					'placeholder' => '',
+				),
+				'description' => esc_html__( 'Optional label output at the end', 'shortcode-item-updated' ),
+			),
+			array(
+				'label'       => esc_html__( 'CSS class?', 'shortcode-item-updated' ),
+				'attr'        => 'class',
+				'type'        => 'text',
+				'placeholder' => '',
+				'description' => esc_html__( 'Additional custom CSS class for the whole wrapper', 'shortcode-item-updated' ),
+			),
+			array(
+				'label'       => esc_html__( 'Wrapper tag?', 'shortcode-item-updated' ),
+				'attr'        => 'wrapper',
+				'type'        => 'text',
+				'placeholder' => 'span',
+				'description' => esc_html__( 'HTML wrapper tag that is used', 'shortcode-item-updated' ),
+			),
+		),
+	);  // end array
+
+	shortcode_ui_register_for_shortcode(
+		'siu-item-updated',
+		apply_filters( 'siu_filter_shortcode_ui_args', $shortcode_ui_args )
+	);
 
 }  // end function

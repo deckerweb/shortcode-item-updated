@@ -3,7 +3,7 @@
 * Contributors: [David Decker](https://github.com/deckerweb), [contributors](https://github.com/deckerweb/shortcode-item-updated/graphs/contributors)
 * Tags: shortcode, updated, last updated, date, time, item, post type, custom post types, post, element
 * Requires at least: 3.6
-* Tested up to: 4.2.x
+* Tested up to: 4.6.x
 * Stable tag: master
 * Donate link: http://ddwb.me/9s
 * License: GPL-2.0+
@@ -121,4 +121,4 @@ Will show only date (as set in WordPress Settings > General) for the item of a p
 
 See plugin file [CHANGES.md here](https://github.com/deckerweb/shortcode-item-updated/blob/master/CHANGES.md)
 
-Copyright (c) 2015 David Decker - DECKERWEB.de
+Copyright (c) 2015-2016 David Decker - DECKERWEB.de

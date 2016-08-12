@@ -1,3 +1,12 @@
+#### Version 2016-08-12
+
+* Added Shortcut for German date format to get output `d.m.Y` like `12.08.2016` (Usage: `date_format="de"`)
+* Added Shortcut for U.S. date format to get output `Y-m-d` like `2016-08-12` (Usage: `date_format="us"`)
+* Added support for plugin "Shortcake" to give Shortcode an UI :-)
+* Updated and corrected translations
+* Approved compatibility with WordPress 4.6
+
+
 #### Version 2015-05-26
 
 * Bugfix for variable name in translation loader

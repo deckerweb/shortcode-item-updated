@@ -1,15 +1,16 @@
 #, fuzzy
 msgid ""
 msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Shortcode Item Updated\n"
-"POT-Creation-Date: 2015-05-26 09:55+0100\n"
-"PO-Revision-Date: 2015-05-26 09:55+0100\n"
+"POT-Creation-Date: 2016-08-12 11:26+0200\n"
+"PO-Revision-Date: 2016-08-12 11:26+0200\n"
 "Last-Translator: David Decker DECKERWEB.de -- http://deckerweb.de/\n"
 "Language-Team: David Decker DECKERWEB.de -- http://deckerweb.de/\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8\n"
+"X-Generator: Poedit 1.8.8\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: shortcode-item-updated.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -19,16 +20,119 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: shortcode-item-updated.php:100
+#: shortcode-item-updated.php:101 shortcode-item-updated.php:261
 msgctxt ""
 "Translators: separator string between date and time values (a space plus @ "
 "symbol)"
 msgid "&#x00A0;@"
 msgstr ""
 
-#: shortcode-item-updated.php:107
+#: shortcode-item-updated.php:108
 msgctxt "Translators: Text before date/ time"
 msgid "Last updated:"
+msgstr ""
+
+#: shortcode-item-updated.php:203
+msgid "Item last updated"
+msgstr ""
+
+#: shortcode-item-updated.php:209
+msgid "Date format"
+msgstr ""
+
+#: shortcode-item-updated.php:215
+msgid "Uses the PHP date format schema"
+msgstr ""
+
+#: shortcode-item-updated.php:218
+msgid "Time format"
+msgstr ""
+
+#: shortcode-item-updated.php:224
+msgid "Uses the PHP time format schema"
+msgstr ""
+
+#: shortcode-item-updated.php:227
+msgid "Show date?"
+msgstr ""
+
+#: shortcode-item-updated.php:231 shortcode-item-updated.php:241
+#: shortcode-item-updated.php:251 shortcode-item-updated.php:273
+msgid "Yes"
+msgstr ""
+
+#: shortcode-item-updated.php:232 shortcode-item-updated.php:240
+#: shortcode-item-updated.php:250 shortcode-item-updated.php:272
+msgid "No"
+msgstr ""
+
+#: shortcode-item-updated.php:236
+msgid "Show time?"
+msgstr ""
+
+#: shortcode-item-updated.php:243
+msgid "Optional time of last update"
+msgstr ""
+
+#: shortcode-item-updated.php:246
+msgid "Show separator?"
+msgstr ""
+
+#: shortcode-item-updated.php:253
+msgid "Whether to show some string between date and time values"
+msgstr ""
+
+#: shortcode-item-updated.php:256
+msgid "Separator string/ character"
+msgstr ""
+
+#: shortcode-item-updated.php:265
+msgid "What is output between date and time strings"
+msgstr ""
+
+#: shortcode-item-updated.php:268
+msgid "Show label?"
+msgstr ""
+
+#: shortcode-item-updated.php:275
+msgid "Whether to show label before date"
+msgstr ""
+
+#: shortcode-item-updated.php:278
+msgid "Label before"
+msgstr ""
+
+#: shortcode-item-updated.php:284
+msgctxt "Translators: HTML placeholder"
+msgid "Last updated:"
+msgstr ""
+
+#: shortcode-item-updated.php:289
+msgid "Optional label output at the beginning"
+msgstr ""
+
+#: shortcode-item-updated.php:292
+msgid "Label after"
+msgstr ""
+
+#: shortcode-item-updated.php:298
+msgid "Optional label output at the end"
+msgstr ""
+
+#: shortcode-item-updated.php:301
+msgid "CSS class?"
+msgstr ""
+
+#: shortcode-item-updated.php:305
+msgid "Additional custom CSS class for the whole wrapper"
+msgstr ""
+
+#: shortcode-item-updated.php:308
+msgid "Wrapper tag?"
+msgstr ""
+
+#: shortcode-item-updated.php:312
+msgid "HTML wrapper tag that is used"
 msgstr ""
 
 #. Plugin Name of the plugin/theme

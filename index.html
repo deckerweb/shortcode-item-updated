@@ -2,16 +2,16 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>Shortcode-item-updated by deckerweb</title>
+    <title>Shortcode Item Updated - WordPress Plugin by deckerweb</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
   <body>
     <section class="page-header">
-      <h1 class="project-name">Shortcode-item-updated</h1>
+      <h1 class="project-name">Shortcode Item Updated - WordPress Plugin</h1>
       <h2 class="project-tagline">A simple plugin for WordPress: Shortcode for showing the last updated date (and/ or time) of an item of a post type. Very useful to output the updated date of a custom post type item on a regular page, within a widget or anywhere else... :-)</h2>
       <a href="https://github.com/deckerweb/shortcode-item-updated" class="btn">View on GitHub</a>
       <a href="https://github.com/deckerweb/shortcode-item-updated/zipball/master" class="btn">Download .zip</a>
@@ -20,14 +20,14 @@
 
     <section class="main-content">
       <h1>
-<a id="shortcode-item-updated" class="anchor" href="#shortcode-item-updated" aria-hidden="true"><span class="octicon octicon-link"></span></a>Shortcode Item Updated</h1>
+<a id="shortcode-item-updated" class="anchor" href="#shortcode-item-updated" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Shortcode Item Updated</h1>
 
 <ul>
 <li>Contributors: <a href="https://github.com/deckerweb">David Decker</a>, <a href="https://github.com/deckerweb/shortcode-item-updated/graphs/contributors">contributors</a>
 </li>
 <li>Tags: shortcode, updated, last updated, date, time, item, post type, custom post types, post, element</li>
 <li>Requires at least: 3.6</li>
-<li>Tested up to: 4.2.x</li>
+<li>Tested up to: 4.6.x</li>
 <li>Stable tag: master</li>
 <li>Donate link: <a href="http://ddwb.me/9s">http://ddwb.me/9s</a>
 </li>
@@ -39,14 +39,14 @@
 <p>Shortcode for showing the last updated date (and/or time) of an item of a post type.</p>
 
 <h2>
-<a id="description" class="anchor" href="#description" aria-hidden="true"><span class="octicon octicon-link"></span></a>Description:</h2>
+<a id="description" class="anchor" href="#description" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Description:</h2>
 
 <p>Very useful to output the updated date of a custom post type item on a regular page, within a widget or anywhere else... :-)</p>
 
 <p><em>Backstory:</em> I needed something like that for a client project to display the last updated date/time of a download post type on a regular content page. Since I knew, I would need the same functionality for an other existing site and maybe in future too, I just build it into a "general plugin" rather than a simple code snippet...! There were no existing plugins/solutions out there (at least I didn't found them yet...) that fitted my needs so I had to build it myself...</p>
 
 <h2>
-<a id="plugin-installation" class="anchor" href="#plugin-installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Plugin Installation:</h2>
+<a id="plugin-installation" class="anchor" href="#plugin-installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Plugin Installation:</h2>
 
 <p><strong>Manual Upload</strong></p>
 
@@ -76,7 +76,7 @@
 </ul>
 
 <h2>
-<a id="usage---examples" class="anchor" href="#usage---examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage - Examples:</h2>
+<a id="usage---examples" class="anchor" href="#usage---examples" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage - Examples:</h2>
 
 <p><strong>Example - default:</strong></p>
 
@@ -103,7 +103,7 @@
 </ul>
 
 <h2>
-<a id="shortcode-parameters" class="anchor" href="#shortcode-parameters" aria-hidden="true"><span class="octicon octicon-link"></span></a>Shortcode Parameters:</h2>
+<a id="shortcode-parameters" class="anchor" href="#shortcode-parameters" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Shortcode Parameters:</h2>
 
 <table>
 <thead>
@@ -197,7 +197,15 @@
 </table>
 
 <h2>
-<a id="widget-usage" class="anchor" href="#widget-usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Widget Usage:</h2>
+<a id="shortcode-parameters---bonus-shortcuts" class="anchor" href="#shortcode-parameters---bonus-shortcuts" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Shortcode Parameters - Bonus Shortcuts:</h2>
+
+<ul>
+<li>Shortcut for German date format to get output <code>d.m.Y</code> like <code>12.08.2016</code> (Usage: <code>date_format="de"</code>)</li>
+<li>Shortcut for U.S. date format to get output <code>Y-m-d</code> like <code>2016-08-12</code> (Usage: <code>date_format="us"</code>)</li>
+</ul>
+
+<h2>
+<a id="widget-usage" class="anchor" href="#widget-usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Widget Usage:</h2>
 
 <ul>
 <li>Shortcode could be used with "Text" widget -- if you have shortcodes for Widgets activated (possible via this filter: <code>add_filter( 'widget_text', 'do_shortcode' );</code> )</li>
@@ -206,7 +214,7 @@
 </ul>
 
 <h2>
-<a id="template-usage-developers" class="anchor" href="#template-usage-developers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Template Usage (Developers):</h2>
+<a id="template-usage-developers" class="anchor" href="#template-usage-developers" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Template Usage (Developers):</h2>
 
 <ul>
 <li>Use WordPress' global "do_shortcode()" function as a template function, like so:</li>
@@ -216,7 +224,7 @@
 </ul>
 
 <h2>
-<a id="plugin-filters-developers" class="anchor" href="#plugin-filters-developers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Plugin Filters (Developers):</h2>
+<a id="plugin-filters-developers" class="anchor" href="#plugin-filters-developers" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Plugin Filters (Developers):</h2>
 
 <ul>
 <li>
@@ -225,10 +233,12 @@
 <code>siu_filter_shortcode_item_updated</code> --&gt; filter Shortcode output</li>
 <li>
 <code>shortcode_atts_siu-item-updated</code> --&gt; lets you add new Shortcode parameters for example (= WordPress' default Shortcode filter <code>shortcode_atts_{$shortcode}</code> )</li>
+<li>
+<code>siu_filter_shortcode_ui_args</code> --&gt; filter arguments for Shortcode UI (Shortcake plugin)</li>
 </ul>
 
 <h2>
-<a id="translations" class="anchor" href="#translations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Translations:</h2>
+<a id="translations" class="anchor" href="#translations" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Translations:</h2>
 
 <ul>
 <li>Used textdomain: <code>shortcode-item-updated</code>
@@ -245,14 +255,14 @@
 </ul>
 
 <h2>
-<a id="changelog" class="anchor" href="#changelog" aria-hidden="true"><span class="octicon octicon-link"></span></a>Changelog:</h2>
+<a id="changelog" class="anchor" href="#changelog" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Changelog:</h2>
 
 <p>See plugin file <a href="https://github.com/deckerweb/shortcode-item-updated/blob/master/CHANGES.md">CHANGES.md here</a></p>
 
-<p>Copyright (c) 2015 David Decker - DECKERWEB.de</p>
+<p>Copyright (c) 2015-2016 David Decker - DECKERWEB.de</p>
 
       <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/deckerweb/shortcode-item-updated">Shortcode-item-updated</a> is maintained by <a href="https://github.com/deckerweb">deckerweb</a>.</span>
+        <span class="site-footer-owner"><a href="https://github.com/deckerweb/shortcode-item-updated">Shortcode Item Updated - WordPress Plugin</a> is maintained by <a href="https://github.com/deckerweb">deckerweb</a>.</span>
 
         <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
       </footer>
@@ -262,4 +272,3 @@
   
   </body>
 </html>
-

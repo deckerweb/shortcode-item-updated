@@ -2,14 +2,14 @@
 
 * Contributors: [David Decker](https://github.com/deckerweb), [contributors](https://github.com/deckerweb/shortcode-item-updated/graphs/contributors)
 * Tags: shortcode, updated, last updated, date, time, item, post type, custom post types, post, element
-* Requires at least: 3.6
+* Requires at least: 3.6.0
 * Tested up to: 4.6.x
 * Stable tag: master
-* Donate link: http://ddwb.me/9s
+* Donate link: [http://ddwb.me/9s](http://ddwb.me/9s)
 * License: GPL-2.0+
-* License URI: http://www.opensource.org/licenses/gpl-license.php
+* License URI: [http://www.opensource.org/licenses/gpl-license.php](http://www.opensource.org/licenses/gpl-license.php)
 
-Shortcode for showing the last updated date (and/or time) of an item of a post type.
+Flexible Shortcode for showing the last updated date (and/or time) of an item of a post type.
 
 
 ## Description:
@@ -17,6 +17,16 @@ Shortcode for showing the last updated date (and/or time) of an item of a post t
 Very useful to output the updated date of a custom post type item on a regular page, within a widget or anywhere else... :-)
 
 *Backstory:* I needed something like that for a client project to display the last updated date/time of a download post type on a regular content page. Since I knew, I would need the same functionality for an other existing site and maybe in future too, I just build it into a "general plugin" rather than a simple code snippet...! There were no existing plugins/solutions out there (at least I didn't found them yet...) that fitted my needs so I had to build it myself...
+
+
+## Features:
+
+* Can be used in post/ page content (also post types), text widgets and also for page builder plugins etc.
+* Supports date/ time format from WordPress settings by default
+* Genesis Framework: easily use this in various footer/ simple edit plugins (don't forget post ID) or with the awesome Blox free/pro plugin and similar - it's that easy!
+* Developer friendly: customize or extend via filters, styles and styling-friendly CSS classes
+* Fully internationalized and translateable! -- German translations already packaged!
+* Developed with security in mind: proper WordPress coding standards and security functions - escape all the things! :)
 
 
 ## Plugin Installation:
@@ -37,6 +47,7 @@ Very useful to output the updated date of a custom post type item on a regular p
 **Updates**
 * Are done via the plugin "GitHub Updater" (see above) - leveraging the default WordPress update system!
 * Setting your GitHub API Token is recommended! :)
+* It's so easy and seamless you won't find any better solution for this ;-)
 
 
 ## Usage - Examples:
@@ -117,7 +128,6 @@ Will show only date (as set in WordPress Settings > General) for the item of a p
 * Used textdomain: `shortcode-item-updated`
 * Default `.pot` file included
 * German translations included (`de_DE`)
-* Currently translateable are the plugin title, plugin description, label before string and the separator string
 * Plugin's own path for translations: `wp-content/plugins/shortcode-item-updated/languages/shortcode-item-updated-de_DE.mo`
 * *Recommended:* Global WordPress lang dir path for translations: `wp-content/languages/plugins/shortcode-item-updated-de_DE.mo` ---> *NOTE: if this file/path exists it will be loaded at higher priority than the plugin path! This is the recommended path & way to store your translations as it is update-safe and allows for custom translations!*
 * Recommended translation tools: *Poedit Pro v1.8+* or *WordPress Plugin "Loco Translate"* or *your IDE/ Code Editor* or *old WordPress "Codestyling Localization"* (for the brave who know what they are doing :) )

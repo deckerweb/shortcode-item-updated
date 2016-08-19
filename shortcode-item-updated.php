@@ -11,7 +11,7 @@
  * Plugin Name:       Shortcode Item Updated
  * Plugin URI:        https://github.com/deckerweb/shortcode-item-updated
  * Description:       Shortcode for showing the last updated date (and/or time) of an item of a post type.
- * Version:           2016.08.12
+ * Version:           2016.08.19
  * Author:            David Decker - DECKERWEB
  * Author URI:        http://deckerweb.de/
  * License:           GPL-2.0+
@@ -24,7 +24,7 @@
  * Copyright (c) 2015-2016 David Decker - DECKERWEB
  */
 
-/*
+/**
  * Exit if called directly.
  */
 if ( ! defined( 'WPINC' ) ) {
@@ -35,7 +35,7 @@ if ( ! defined( 'WPINC' ) ) {
 add_action( 'init', 'ddw_siu_load_translations', 1 );
 /**
  * Load the text domain for translation of the plugin.
- * 
+ *
  * @since 2015.05.26
  *
  * @uses  load_textdomain()	To load translations first from WP_LANG_DIR sub folder.
@@ -71,6 +71,32 @@ function ddw_siu_load_translations() {
 }  // end function
 
 
+/**
+ * Data validation function to only allow values "yes" and "no".
+ *
+ * @since  2016.08.16
+ *
+ * @param  string $param
+ *
+ * @return string Validated and escaped string.
+ */
+function ddw_siu_yes_no( $param = '' ) {
+
+	$param = strtolower( esc_attr( $param ) );
+
+	if ( 'yes' === $param ) {
+
+		return $param;
+
+	} else {
+
+		return 'no';
+
+	}  // end if
+
+}  // end function
+
+
 add_shortcode( 'siu-item-updated', 'ddw_siu_item_updated' );
 /**
  * Shortcode for showing the last updated date (and/or time) of an item of a post type.
@@ -79,6 +105,7 @@ add_shortcode( 'siu-item-updated', 'ddw_siu_item_updated' );
  * @since  2015.05.25
  *
  * @uses   shortcode_atts()
+ * @uses   ddw_siu_yes_no()
  *
  * @param  array $atts
  *
@@ -138,18 +165,18 @@ function ddw_siu_item_updated( $atts ) {
 	/** Prepare time display */
 	$time_display = sprintf(
 		'%1$s%2$s%3$s',
-		( 'yes' == esc_attr( $atts[ 'show_sep' ] ) ) ? esc_attr( $atts[ 'sep' ] ) : '',
-		( 'yes' == esc_attr( $atts[ 'show_time' ] ) ) ? ' ' . $time_updated : '',
+		( 'yes' === ddw_siu_yes_no( $atts[ 'show_sep' ] ) ) ? esc_attr( $atts[ 'sep' ] ) : '',
+		( 'yes' === ddw_siu_yes_no( $atts[ 'show_time' ] ) ) ? ' ' . $time_updated : '',
 		! empty( $atts[ 'label_after' ] ) ? ' ' . esc_html__( $atts[ 'label_after' ] ) : ''
 	);
 
 	/** Prepare output */
 	$output = sprintf(
 		'<%1$s class="item-last-updated%2$s">%3$s%4$s%5$s</%1$s>',
-		esc_attr( $atts[ 'wrapper' ] ),
-		! empty( $atts[ 'class' ] ) ? ' ' . esc_attr( $atts[ 'class' ] ) : '',
-		( 'yes' == esc_attr( $atts[ 'show_label' ] ) ) ? esc_html__( $atts[ 'label_before' ] ) . ' ' : '',
-		( 'yes' == esc_attr( $atts[ 'show_date' ] ) ) ? $date_updated : '',
+		strtolower( sanitize_html_class( $atts[ 'wrapper' ] ) ),
+		! empty( $atts[ 'class' ] ) ? ' ' . sanitize_html_class( $atts[ 'class' ] ) : '',
+		( 'yes' === ddw_siu_yes_no( $atts[ 'show_label' ] ) ) ? esc_html__( $atts[ 'label_before' ] ) . ' ' : '',
+		( 'yes' === ddw_siu_yes_no( $atts[ 'show_date' ] ) ) ? $date_updated : '',
 		$time_display
 	);
 
@@ -189,6 +216,7 @@ function ddw_siu_prepare_shortcode_ui() {
 
 /**
  * Shortcode UI setup for Shortcake plugin (Shortcode UI).
+ * @link   https://wordpress.org/plugins/shortcode-ui/
  *
  * @since  2016.08.12
  *
@@ -228,8 +256,8 @@ function ddw_siu_register_shortcode_for_ui() {
 				'attr'    => 'show_date',
 				'type'    => 'select',
 				'options' => array(
-								'yes' => esc_html__( 'Yes', 'shortcode-item-updated' ),
-								'no'  => esc_html__( 'No', 'shortcode-item-updated' ),
+					'yes' => esc_html__( 'Yes', 'shortcode-item-updated' ),
+					'no'  => esc_html__( 'No', 'shortcode-item-updated' ),
 				),
 			),
 			array(
@@ -237,8 +265,8 @@ function ddw_siu_register_shortcode_for_ui() {
 				'attr'    => 'show_time',
 				'type'    => 'select',
 				'options' => array(
-								'no'  => esc_html__( 'No', 'shortcode-item-updated' ),
-								'yes' => esc_html__( 'Yes', 'shortcode-item-updated' ),
+					'no'  => esc_html__( 'No', 'shortcode-item-updated' ),
+					'yes' => esc_html__( 'Yes', 'shortcode-item-updated' ),
 				),
 				'description' => esc_html__( 'Optional time of last update', 'shortcode-item-updated' ),
 			),
@@ -247,8 +275,8 @@ function ddw_siu_register_shortcode_for_ui() {
 				'attr'    => 'show_sep',
 				'type'    => 'select',
 				'options' => array(
-								'no'  => esc_html__( 'No', 'shortcode-item-updated' ),
-								'yes' => esc_html__( 'Yes', 'shortcode-item-updated' ),
+					'no'  => esc_html__( 'No', 'shortcode-item-updated' ),
+					'yes' => esc_html__( 'Yes', 'shortcode-item-updated' ),
 				),
 				'description' => esc_html__( 'Whether to show some string between date and time values', 'shortcode-item-updated' ),
 			),
@@ -269,8 +297,8 @@ function ddw_siu_register_shortcode_for_ui() {
 				'attr'     => 'show_label',
 				'type'    => 'select',
 				'options' => array(
-								'no'  => esc_html__( 'No', 'shortcode-item-updated' ),
-								'yes' => esc_html__( 'Yes', 'shortcode-item-updated' ),
+					'no'  => esc_html__( 'No', 'shortcode-item-updated' ),
+					'yes' => esc_html__( 'Yes', 'shortcode-item-updated' ),
 				),
 				'description' => esc_html__( 'Whether to show label before date', 'shortcode-item-updated' ),
 			),
@@ -314,6 +342,7 @@ function ddw_siu_register_shortcode_for_ui() {
 		),
 	);  // end array
 
+	/** Pass our Shortcode and UI args to Shortcake plugin - filterable */
 	shortcode_ui_register_for_shortcode(
 		'siu-item-updated',
 		apply_filters( 'siu_filter_shortcode_ui_args', $shortcode_ui_args )

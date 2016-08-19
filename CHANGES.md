@@ -1,3 +1,10 @@
+#### Version 2016-08-19
+
+* Updated Readme file
+* Updated .pot file plus German translations
+* Improved security and polishing of plugin
+
+
 #### Version 2016-08-12
 
 * Added Shortcut for German date format to get output `d.m.Y` like `12.08.2016` (Usage: `date_format="de"`)

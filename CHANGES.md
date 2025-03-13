@@ -1,3 +1,9 @@
+#### Version 2016-08-??
+
+* For a few Shortcode attributes you can now also use the German "ja" und "nein" (instead of "yes" and "no")
+* Updated .pot file plus German translations
+
+
 #### Version 2016-08-19
 
 * Updated Readme file

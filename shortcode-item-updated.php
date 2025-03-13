@@ -28,8 +28,10 @@
  * Exit if called directly.
  */
 if ( ! defined( 'WPINC' ) ) {
+
 	die;
-}
+
+}  // end if
 
 
 add_action( 'init', 'ddw_siu_load_translations', 1 );
@@ -38,7 +40,7 @@ add_action( 'init', 'ddw_siu_load_translations', 1 );
  *
  * @since 2015.05.26
  *
- * @uses  load_textdomain()	To load translations first from WP_LANG_DIR sub folder.
+ * @uses  load_textdomain()	       To load translations first from WP_LANG_DIR sub folder.
  * @uses  load_plugin_textdomain() To additionally load default translations from plugin folder (default).
  */
 function ddw_siu_load_translations() {
@@ -76,7 +78,7 @@ function ddw_siu_load_translations() {
  *
  * @since  2016.08.16
  *
- * @param  string $param
+ * @param  string $param Shortcode param to validate.
  *
  * @return string Validated and escaped string.
  */
@@ -84,9 +86,9 @@ function ddw_siu_yes_no( $param = '' ) {
 
 	$param = strtolower( esc_attr( $param ) );
 
-	if ( 'yes' === $param ) {
+	if ( in_array( $param, array( 'yes', 'ja' ) ) ) {
 
-		return $param;
+		return 'yes';
 
 	} else {
 
@@ -104,8 +106,8 @@ add_shortcode( 'siu-item-updated', 'ddw_siu_item_updated' );
  *
  * @since  2015.05.25
  *
- * @uses   shortcode_atts()
- * @uses   ddw_siu_yes_no()
+ * @uses   shortcode_atts() To parse Shortcode attributes.
+ * @uses   ddw_siu_yes_no() To validate Shortcode attributes/ parameters.
  *
  * @param  array $atts
  *
@@ -190,7 +192,9 @@ add_action( 'init', 'ddw_siu_prepare_shortcode_ui' );
 /**
  * If plugin Shortcake is active, load our support for it.
  *
- * @since 2016.08.12
+ * @since  2016.08.12
+ *
+ * @return add_action() Run action in Shortcake plugin.
  */
 function ddw_siu_prepare_shortcode_ui() {
 
@@ -220,7 +224,7 @@ function ddw_siu_prepare_shortcode_ui() {
  *
  * @since  2016.08.12
  *
- * @uses   shortcode_ui_register_for_shortcode()
+ * @uses   shortcode_ui_register_for_shortcode() To register Shortcode attributes for UI.
  *
  * @return array Array with Shortcode UI arguments.
  */
@@ -229,24 +233,23 @@ function ddw_siu_register_shortcode_for_ui() {
 	$shortcode_ui_args = array(
 		/** General setup for the Shortcode UI */
 		'label'         => esc_html__( 'Item last updated', 'shortcode-item-updated' ),
-		//'add_button'    => 'icon_only',
 		'listItemImage' => 'dashicons-backup',
 		/** Arguments for the Shortcode attributes */
 		'attrs'         => array(
 			array(
-				'label' => esc_html__( 'Date format', 'shortcode-item-updated' ),
-				'attr'  => 'date_format',
-				'type'  => 'text',
-				'meta'  => array(
+				'label'       => esc_html__( 'Date format', 'shortcode-item-updated' ),
+				'attr'        => 'date_format',
+				'type'        => 'text',
+				'meta'        => array(
 					'placeholder' => get_option( 'date_format' ),
 				),
 				'description' => esc_html__( 'Uses the PHP date format schema', 'shortcode-item-updated' ),
 			),
 			array(
-				'label' => esc_html__( 'Time format', 'shortcode-item-updated' ),
-				'attr'  => 'time_format',
-				'type'  => 'text',
-				'meta'  => array(
+				'label'       => esc_html__( 'Time format', 'shortcode-item-updated' ),
+				'attr'        => 'time_format',
+				'type'        => 'text',
+				'meta'        => array(
 					'placeholder' => get_option( 'time_format' ),
 				),
 				'description' => esc_html__( 'Uses the PHP time format schema', 'shortcode-item-updated' ),
@@ -261,20 +264,20 @@ function ddw_siu_register_shortcode_for_ui() {
 				),
 			),
 			array(
-				'label'   => esc_html__( 'Show time?', 'shortcode-item-updated' ),
-				'attr'    => 'show_time',
-				'type'    => 'select',
-				'options' => array(
+				'label'       => esc_html__( 'Show time?', 'shortcode-item-updated' ),
+				'attr'        => 'show_time',
+				'type'        => 'select',
+				'options'     => array(
 					'no'  => esc_html__( 'No', 'shortcode-item-updated' ),
 					'yes' => esc_html__( 'Yes', 'shortcode-item-updated' ),
 				),
 				'description' => esc_html__( 'Optional time of last update', 'shortcode-item-updated' ),
 			),
 			array(
-				'label'   => esc_html__( 'Show separator?', 'shortcode-item-updated' ),
-				'attr'    => 'show_sep',
-				'type'    => 'select',
-				'options' => array(
+				'label'       => esc_html__( 'Show separator?', 'shortcode-item-updated' ),
+				'attr'        => 'show_sep',
+				'type'        => 'select',
+				'options'     => array(
 					'no'  => esc_html__( 'No', 'shortcode-item-updated' ),
 					'yes' => esc_html__( 'Yes', 'shortcode-item-updated' ),
 				),
@@ -293,20 +296,20 @@ function ddw_siu_register_shortcode_for_ui() {
 				'description' => esc_html__( 'What is output between date and time strings', 'shortcode-item-updated' ),
 			),
 			array(
-				'label'    => esc_html__( 'Show label?', 'shortcode-item-updated' ),
-				'attr'     => 'show_label',
-				'type'    => 'select',
-				'options' => array(
+				'label'       => esc_html__( 'Show label?', 'shortcode-item-updated' ),
+				'attr'        => 'show_label',
+				'type'        => 'select',
+				'options'     => array(
 					'no'  => esc_html__( 'No', 'shortcode-item-updated' ),
 					'yes' => esc_html__( 'Yes', 'shortcode-item-updated' ),
 				),
 				'description' => esc_html__( 'Whether to show label before date', 'shortcode-item-updated' ),
 			),
 			array(
-				'label'  => esc_html__( 'Label before', 'shortcode-item-updated' ),
-				'attr'   => 'label_before',
-				'type'   => 'text',
-				'meta'   => array(
+				'label'       => esc_html__( 'Label before', 'shortcode-item-updated' ),
+				'attr'        => 'label_before',
+				'type'        => 'text',
+				'meta'        => array(
 					/* translators: HTML placeholder */
 					'placeholder' => esc_html( _x(
 						'Last updated:',
@@ -317,10 +320,10 @@ function ddw_siu_register_shortcode_for_ui() {
 				'description' => esc_html__( 'Optional label output at the beginning', 'shortcode-item-updated' ),
 			),
 			array(
-				'label'  => esc_html__( 'Label after', 'shortcode-item-updated' ),
-				'attr'   => 'label_after',
-				'type'   => 'text',
-				'meta'   => array(
+				'label'       => esc_html__( 'Label after', 'shortcode-item-updated' ),
+				'attr'        => 'label_after',
+				'type'        => 'text',
+				'meta'        => array(
 					'placeholder' => '',
 				),
 				'description' => esc_html__( 'Optional label output at the end', 'shortcode-item-updated' ),

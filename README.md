@@ -124,6 +124,7 @@ Will show only date (as set in WordPress Settings > General) for the item of a p
 
 
 ## Translations:
+= Localization & Internationalizaton:
 
 * Used textdomain: `shortcode-item-updated`
 * Default `.pot` file included
@@ -133,8 +134,16 @@ Will show only date (as set in WordPress Settings > General) for the item of a p
 * Recommended translation tools: *Poedit Pro v1.8+* or *WordPress Plugin "Loco Translate"* or *your IDE/ Code Editor* or *old WordPress "Codestyling Localization"* (for the brave who know what they are doing :) )
 
 
-## Changelog:
+## Changelog - Version History:
 
-See plugin file [CHANGES.md here](https://github.com/deckerweb/shortcode-item-updated/blob/master/CHANGES.md)
+--> See plugin file [CHANGES.md here](https://github.com/deckerweb/shortcode-item-updated/blob/master/CHANGES.md)
+
+
+## Todo:
+
+* [ ] Maybe add additional button for Visual Editor (TinyMCE)
+* [ ] Maybe add additional QuickTag button for the Text Editor
+* [ ] Add screenshots
+* [ ] Enhance documentation and usage examples
 
 Copyright (c) 2015-2016 David Decker - DECKERWEB.de

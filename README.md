@@ -3,11 +3,8 @@
 * Contributors: [David Decker](https://github.com/deckerweb), [contributors](https://github.com/deckerweb/shortcode-item-updated/graphs/contributors)
 * Tags: shortcode, updated, last updated, date, time, item, post type, custom post types, post, element
 * Requires at least: 3.6.0
-* Tested up to: 4.6.x
+* Tested up to: WP 6.7.2 / PHP 8.3
 * Stable tag: master
-* Donate link: [http://ddwb.me/9s](http://ddwb.me/9s)
-* License: GPL-2.0+
-* License URI: [http://www.opensource.org/licenses/gpl-license.php](http://www.opensource.org/licenses/gpl-license.php)
 
 Flexible Shortcode for showing the last updated date (and/or time) of an item of a post type.
 
@@ -90,6 +87,8 @@ Will show only date (as set in WordPress Settings > General) for the item of a p
 
 ## Widget Usage:
 
+NO LONGER Recommended! Widgets are outdated, I do not recommend them (and _didn't_ use them myself for lots of years already!).
+
 * Shortcode could be used with "Text" widget -- if you have shortcodes for Widgets activated (possible via this filter: `add_filter( 'widget_text', 'do_shortcode' );` )
 * If using extended/ advanced text widget plugins, the Shortcode usage then is already enabled automatically... :-)
 * NOTE: You have to provide a unique post ID if using this outside of the Loop!
@@ -107,30 +106,55 @@ Will show only date (as set in WordPress Settings > General) for the item of a p
 * `siu_filter_shortcode_defaults` --> filter default values of Shortcode parameters
 * `siu_filter_shortcode_item_updated` --> filter Shortcode output
 * `shortcode_atts_siu-item-updated` --> lets you add new Shortcode parameters for example (= WordPress' default Shortcode filter `shortcode_atts_{$shortcode}` )
-* `siu_filter_shortcode_ui_args` --> filter arguments for Shortcode UI (Shortcake plugin)
+
+---
+
+## Changelog – Version History:
+
+### v2.0.0 (March 2025)
+
+* Updated plugin after 9 years, yeah! – Brought back to its basic beauty. (How it should be!)
+* Removed additional translation loading – no longer needed; WordPress does now all we need by itself (yeah!)
+* Removed support for third-party plugin "Shortcode UI (Shortcake)" which is no longer maintained, and, to be honest, no longer needed
+* Brought changelog to Readme file here, CHANGES.md file removed
+* Changed plugins versioning from date-based to version number based, which makes more sense here
+* Changed to version v2.0.0 just to express the fresh restart
 
 
-## Translations:
-= Localization & Internationalizaton:
+### Version 2016-08-19
 
-* Used textdomain: `shortcode-item-updated`
-* Default `.pot` file included
-* German translations included (`de_DE`)
-* Plugin's own path for translations: `wp-content/plugins/shortcode-item-updated/languages/shortcode-item-updated-de_DE.mo`
-* *Recommended:* Global WordPress lang dir path for translations: `wp-content/languages/plugins/shortcode-item-updated-de_DE.mo` ---> *NOTE: if this file/path exists it will be loaded at higher priority than the plugin path! This is the recommended path & way to store your translations as it is update-safe and allows for custom translations!*
-* Recommended translation tools: *Poedit Pro v1.8+* or *WordPress Plugin "Loco Translate"* or *your IDE/ Code Editor* or *old WordPress "Codestyling Localization"* (for the brave who know what they are doing :) )
+* Updated Readme file
+* Updated .pot file plus German translations
+* Improved security and polishing of plugin
 
 
-## Changelog - Version History:
+### Version 2016-08-12
 
---> See plugin file [CHANGES.md here](https://github.com/deckerweb/shortcode-item-updated/blob/master/CHANGES.md)
+* Added Shortcut for German date format to get output `d.m.Y` like `12.08.2016` (Usage: `date_format="de"`)
+* Added Shortcut for U.S. date format to get output `Y-m-d` like `2016-08-12` (Usage: `date_format="us"`)
+* Added support for plugin "Shortcake" to give Shortcode an UI :-)
+* Updated and corrected translations
+* Approved compatibility with WordPress 4.6
 
 
-## Todo:
+### Version 2015-05-26
 
-* [ ] Maybe add additional button for Visual Editor (TinyMCE)
-* [ ] Maybe add additional QuickTag button for the Text Editor
-* [ ] Add screenshots
-* [ ] Enhance documentation and usage examples
+* Bugfix for variable name in translation loader
+* Refined Shortcode parameters
+* Added label "Last updated:" (defaults to not being shown!)
+* Made separator string translateable (makes sense for a lot of languages to have a "sane default" then)
+* Added translations to the plugin; plus default .pot file and German translations
+* Added "get_the_ID()" as the default value of "post_id" parameter -- Note: in this case the Shortcode could be used as is [siu-item-updated] but within the Loop!
+* Added CHANGES.md file for changelogs
+* Added installations instructions to readme
+* Improved readme overall
+* Minor formatting stuff
 
-Copyright (c) 2015-2016 David Decker - DECKERWEB.de
+
+### Version 2015-05-25
+
+* Initial release on GitHub
+
+---
+
+Copyright (c) 2015-2025 David Decker – DECKERWEB.de

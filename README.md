@@ -2,12 +2,24 @@
 
 * Contributors: [David Decker](https://github.com/deckerweb), [contributors](https://github.com/deckerweb/shortcode-item-updated/graphs/contributors)
 * Tags: shortcode, updated, last updated, date, time, item, post type, custom post types, post, element
-* Requires at least: 3.6.0
+* Requires at least: WP 6.7
 * Tested up to: WP 6.7.2 / PHP 8.3
 * Stable tag: master
 
 Flexible Shortcode for showing the last updated date (and/or time) of an item of a post type.
 
+---
+
+## Support the Project
+
+If you find this project helpful, consider showing your support by buying me a coffee! Your contribution helps me keep developing and improving this plugin.
+
+Enjoying the plugin? Feel free to treat me to a cup of coffee ☕🙂 through the following options:
+
+- [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W81BNTZE)
+- [Buy me a coffee](https://buymeacoffee.com/daveshine)
+
+---
 
 ## Description:
 
@@ -15,6 +27,7 @@ Very useful to output the updated date of a custom post type item on a regular p
 
 *Backstory:* I needed something like that for a client project to display the last updated date/time of a download post type on a regular content page. Since I knew, I would need the same functionality for an other existing site and maybe in future too, I just build it into a "general plugin" rather than a simple code snippet...! There were no existing plugins/solutions out there (at least I didn't found them yet...) that fitted my needs so I had to build it myself...
 
+---
 
 ## Features:
 
@@ -25,6 +38,7 @@ Very useful to output the updated date of a custom post type item on a regular p
 * Fully internationalized and translateable! -- German translations already packaged!
 * Developed with security in mind: proper WordPress coding standards and security functions - escape all the things! :)
 
+---
 
 ## Plugin Installation:
 
@@ -33,6 +47,7 @@ Very useful to output the updated date of a custom post type item on a regular p
 * unzip the package, then **rename the folder to `shortcode-item-updated`**, then upload renamed folder via FTP to your WordPress plugin directory
 * activate the plugin
 
+---
 
 ## Usage - Examples:
 
@@ -61,6 +76,7 @@ Will show only date (as set in WordPress Settings > General) for the item of a p
 - Will also show the time
 - Will show a "separator" string between date and time values (sep)
 
+---
 
 ## Shortcode Parameters:
 
@@ -79,11 +95,14 @@ Will show only date (as set in WordPress Settings > General) for the item of a p
 | `class` | additional custom class for the wrapper | "" (none) | -- |
 | `wrapper` | HTML wrapper element - any HTML5 wrapper is possible | `span` | -- |
 
+---
+
 ## Shortcode Parameters - Bonus Shortcuts:
 
 * Shortcut for German date format to get output `d.m.Y` like `12.08.2016` (Usage: `date_format="de"`)
 * Shortcut for U.S. date format to get output `Y-m-d` like `2016-08-12` (Usage: `date_format="us"`)
 
+---
 
 ## Widget Usage:
 
@@ -93,6 +112,7 @@ NO LONGER Recommended! Widgets are outdated, I do not recommend them (and _didn'
 * If using extended/ advanced text widget plugins, the Shortcode usage then is already enabled automatically... :-)
 * NOTE: You have to provide a unique post ID if using this outside of the Loop!
 
+---
 
 ## Template Usage (Developers):
 
@@ -100,6 +120,7 @@ NO LONGER Recommended! Widgets are outdated, I do not recommend them (and _didn'
 * `<?php do_shortcode( '[siu-item-updated post_id="123" show_label="yes"]' ); ?>` --> parameters apply like for regular Shortcode usage (see above)!
 * NOTE: You have to provide a unique post ID if using this outside of the Loop!
 
+---
 
 ## Plugin Filters (Developers):
 
@@ -111,7 +132,7 @@ NO LONGER Recommended! Widgets are outdated, I do not recommend them (and _didn'
 
 ## Changelog – Version History:
 
-### v2.0.0 (March 2025)
+#### v2.0.0 (March 2025)
 
 * Updated plugin after 9 years, yeah! – Brought back to its basic beauty. (How it should be!)
 * Removed additional translation loading – no longer needed; WordPress does now all we need by itself (yeah!)
@@ -121,14 +142,14 @@ NO LONGER Recommended! Widgets are outdated, I do not recommend them (and _didn'
 * Changed to version v2.0.0 just to express the fresh restart
 
 
-### Version 2016-08-19
+#### Version 2016-08-19
 
 * Updated Readme file
 * Updated .pot file plus German translations
 * Improved security and polishing of plugin
 
 
-### Version 2016-08-12
+#### Version 2016-08-12
 
 * Added Shortcut for German date format to get output `d.m.Y` like `12.08.2016` (Usage: `date_format="de"`)
 * Added Shortcut for U.S. date format to get output `Y-m-d` like `2016-08-12` (Usage: `date_format="us"`)
@@ -137,7 +158,7 @@ NO LONGER Recommended! Widgets are outdated, I do not recommend them (and _didn'
 * Approved compatibility with WordPress 4.6
 
 
-### Version 2015-05-26
+#### Version 2015-05-26
 
 * Bugfix for variable name in translation loader
 * Refined Shortcode parameters
@@ -151,7 +172,7 @@ NO LONGER Recommended! Widgets are outdated, I do not recommend them (and _didn'
 * Minor formatting stuff
 
 
-### Version 2015-05-25
+#### Version 2015-05-25
 
 * Initial release on GitHub
 

@@ -1,12 +1,12 @@
 # Shortcode Item Updated
 
+Flexible Shortcode for showing the last updated date (and/or time) of an item of a post type.
+
 * Contributors: [David Decker](https://github.com/deckerweb), [contributors](https://github.com/deckerweb/shortcode-item-updated/graphs/contributors)
 * Tags: shortcode, updated, last updated, date, time, item, post type, custom post types, post, element
 * Requires at least: WP 6.7
 * Tested up to: WP 6.7.2 / PHP 8.3
 * Stable tag: master
-
-Flexible Shortcode for showing the last updated date (and/or time) of an item of a post type.
 
 ---
 

@@ -22,45 +22,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 
-add_action( 'init', 'ddw_siu_load_translations', 1 );
-/**
- * Load the text domain for translation of the plugin.
- *
- * @since 2015.05.26
- *
- * @uses  load_textdomain()	       To load translations first from WP_LANG_DIR sub folder.
- * @uses  load_plugin_textdomain() To additionally load default translations from plugin folder (default).
- */
-function ddw_siu_load_translations() {
-
-	/** Set unique textdomain string */
-	$siu_textdomain = 'shortcode-item-updated';
-
-	/** The 'plugin_locale' filter is also used by default in load_plugin_textdomain() */
-	$locale = apply_filters( 'plugin_locale', get_locale(), $siu_textdomain );
-
-	/** Set filter for WordPress languages directory */
-	$siu_wp_lang_dir = apply_filters(
-		'siu_filter_wp_lang_dir',
-		trailingslashit( WP_LANG_DIR ) . 'plugins/' . $siu_textdomain . '-' . $locale . '.mo'
-	);
-
-	/** Translations: First, look in WordPress' "languages" folder = custom & update-secure! */
-	load_textdomain(
-		$siu_textdomain,
-		$siu_wp_lang_dir
-	);
-
-	/** Translations: Secondly, look in plugin's "languages" folder = default */
-	load_plugin_textdomain(
-		$siu_textdomain,
-		FALSE,
-		trailingslashit( dirname( plugin_basename( __FILE__ ) ) ) . 'languages'
-	);
-
-}  // end function
-
-
 /**
  * Data validation function to only allow values "yes" and "no".
  *

@@ -1,37 +1,25 @@
 <?php # -*- coding: utf-8 -*-
 /**
- * Main plugin file.
- * @package           Shortcode Item Updated
- * @author            David Decker
- * @copyright         Copyright (c) 2015-2016, David Decker - DECKERWEB
- * @license           GPL-2.0+
- * @link              http://deckerweb.de/twitter
+ * Plugin Name:  Shortcode Item Updated
+ * Plugin URI:   https://github.com/deckerweb/shortcode-item-updated
+ * Description:  Shortcode for showing the last updated date (and/or time) of an item of a post type.
+ * Version:      2.0.0
+ * Author:       David Decker – DECKERWEB
+ * Author URI:   https://deckerweb.de/
+ * License:      GPL-2.0+
+ * License URI:  http://www.opensource.org/licenses/gpl-license.php
+ * Text Domain:  shortcode-item-updated
+ * Domain Path:  /languages/
+ * Requires WP:  6.7
+ * Requires PHP: 7.4
  *
- * @wordpress-plugin
- * Plugin Name:       Shortcode Item Updated
- * Plugin URI:        https://github.com/deckerweb/shortcode-item-updated
- * Description:       Shortcode for showing the last updated date (and/or time) of an item of a post type.
- * Version:           2016.08.19
- * Author:            David Decker - DECKERWEB
- * Author URI:        http://deckerweb.de/
- * License:           GPL-2.0+
- * License URI:       http://www.opensource.org/licenses/gpl-license.php
- * Text Domain:       shortcode-item-updated
- * Domain Path:       /languages/
- * GitHub Plugin URI: https://github.com/deckerweb/shortcode-item-updated
- * GitHub Branch:     master
- *
- * Copyright (c) 2015-2016 David Decker - DECKERWEB
+ * Copyright (c) 2015-2025 David Decker – DECKERWEB
  */
 
-/**
- * Exit if called directly.
- */
-if ( ! defined( 'WPINC' ) ) {
-
-	die;
-
-}  // end if
+/** Prevent direct access */
+if ( ! defined( 'ABSPATH' ) ) {
+	 exit;  // Exit if accessed directly.
+}
 
 
 add_action( 'init', 'ddw_siu_load_translations', 1 );

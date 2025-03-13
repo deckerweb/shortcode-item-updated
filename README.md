@@ -36,19 +36,6 @@ Very useful to output the updated date of a custom post type item on a regular p
 * unzip the package, then **rename the folder to `shortcode-item-updated`**, then upload renamed folder via FTP to your WordPress plugin directory
 * activate the plugin
 
-**Via "GitHub Updater" Plugin** *(recommended!)*
-
-* Install & activate the "GitHub Updater" plugin, get from here: [https://github.com/afragen/github-updater](https://github.com/afragen/github-updater)
-* Recommended: set your API Token in the plugin's settings
-* Go to "Settings > GitHub Updater > Install Plugin"
-* Paste the GitHub URL `https://github.com/deckerweb/shortcode-item-updated` in the "Plugin URI" field (branch "master" is pre-set), then hit the "Install Plugin" button there
-* Install & activate the plugin
-
-**Updates**
-* Are done via the plugin "GitHub Updater" (see above) - leveraging the default WordPress update system!
-* Setting your GitHub API Token is recommended! :)
-* It's so easy and seamless you won't find any better solution for this ;-)
-
 
 ## Usage - Examples:
 

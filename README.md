@@ -1,12 +1,11 @@
 # Shortcode Item Updated
 
-Flexible Shortcode for showing the last updated date (and/or time) of an item of a post type.
+**Simple & lightweight:** Flexible Shortcode for showing the **last updated** date (and/or time) of an item of a post type.
 
-* Contributors: [David Decker](https://github.com/deckerweb), [contributors](https://github.com/deckerweb/shortcode-item-updated/graphs/contributors)
-* Tags: shortcode, updated, last updated, date, time, item, post type, custom post types, post, element
-* Requires at least: WP 6.7
-* Tested up to: WP 6.7.2 / PHP 8.3
-* Stable tag: master
+### Tested Compatibility
+- **WordPress**: 6.7.2
+- **PHP**: 8.3+
+- Requires at least: WP 6.7 / PHP 7.4
 
 ---
 
@@ -21,7 +20,7 @@ Enjoying the plugin? Feel free to treat me to a cup of coffee ☕🙂 through th
 
 ---
 
-## Description:
+## Description
 
 Very useful to output the updated date of a custom post type item on a regular page, within a widget or anywhere else... :-)
 
@@ -29,7 +28,7 @@ Very useful to output the updated date of a custom post type item on a regular p
 
 ---
 
-## Features:
+## Features
 
 * Can be used in post/ page content (also post types), text widgets and also for page builder plugins etc.
 * Supports date/ time format from WordPress settings by default
@@ -40,16 +39,16 @@ Very useful to output the updated date of a custom post type item on a regular p
 
 ---
 
-## Plugin Installation:
+## Installation
 
-**Manual Upload**
-* download current .zip archive from master branch here, URL: [https://github.com/deckerweb/shortcode-item-updated/archive/master.zip](https://github.com/deckerweb/shortcode-item-updated/archive/master.zip)
-* unzip the package, then **rename the folder to `shortcode-item-updated`**, then upload renamed folder via FTP to your WordPress plugin directory
-* activate the plugin
+**Quick Install**
+1. **Download ZIP:** [**shortcode-item-updated.zip**](https://github.com/deckerweb/shortcode-item-updated/releases/latest/download/shortcode-item-updated.zip)
+2. Upload via WordPress Plugins > Add New > Upload Plugin
+3. Once activated, you can use the shortcode – see Usage below
 
 ---
 
-## Usage - Examples:
+## Usage - Examples
 
 **Example - default:**
 
@@ -78,7 +77,7 @@ Will show only date (as set in WordPress Settings > General) for the item of a p
 
 ---
 
-## Shortcode Parameters:
+## Shortcode Parameters
 
 | Parameter | Description |  Default | Translateable
 |:----------:|:-------------|:------:|:-------------:|
@@ -97,16 +96,16 @@ Will show only date (as set in WordPress Settings > General) for the item of a p
 
 ---
 
-## Shortcode Parameters - Bonus Shortcuts:
+## Shortcode Parameters - Bonus Shortcuts
 
 * Shortcut for German date format to get output `d.m.Y` like `12.08.2016` (Usage: `date_format="de"`)
 * Shortcut for U.S. date format to get output `Y-m-d` like `2016-08-12` (Usage: `date_format="us"`)
 
 ---
 
-## Widget Usage:
+## Widget Usage
 
-NO LONGER Recommended! Widgets are outdated, I do not recommend them (and _didn't_ use them myself for lots of years already!).
+NO LONGER recommended! Widgets are outdated, I do not recommend them (and _didn't_ use them myself for lots of years already!).
 
 * Shortcode could be used with "Text" widget -- if you have shortcodes for Widgets activated (possible via this filter: `add_filter( 'widget_text', 'do_shortcode' );` )
 * If using extended/ advanced text widget plugins, the Shortcode usage then is already enabled automatically... :-)
@@ -114,7 +113,7 @@ NO LONGER Recommended! Widgets are outdated, I do not recommend them (and _didn'
 
 ---
 
-## Template Usage (Developers):
+## Template Usage (Developers)
 
 * Use WordPress' global "do_shortcode()" function as a template function, like so:
 * `<?php do_shortcode( '[siu-item-updated post_id="123" show_label="yes"]' ); ?>` --> parameters apply like for regular Shortcode usage (see above)!
@@ -122,7 +121,7 @@ NO LONGER Recommended! Widgets are outdated, I do not recommend them (and _didn'
 
 ---
 
-## Plugin Filters (Developers):
+## Plugin Filters (Developers)
 
 * `siu_filter_shortcode_defaults` --> filter default values of Shortcode parameters
 * `siu_filter_shortcode_item_updated` --> filter Shortcode output
@@ -130,7 +129,7 @@ NO LONGER Recommended! Widgets are outdated, I do not recommend them (and _didn'
 
 ---
 
-## Changelog – Version History:
+## Changelog – Version History
 
 #### v2.0.0 (March 2025)
 
@@ -178,4 +177,4 @@ NO LONGER Recommended! Widgets are outdated, I do not recommend them (and _didn'
 
 ---
 
-Copyright (c) 2015-2025 David Decker – DECKERWEB.de
+Copyright © 2015-2025 David Decker – DECKERWEB.de

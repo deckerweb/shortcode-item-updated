@@ -139,6 +139,7 @@ NO LONGER recommended! Widgets are outdated, I do not recommend them (and _didn'
 * Brought changelog to Readme file here, CHANGES.md file removed
 * Changed plugins versioning from date-based to version number based, which makes more sense here
 * Changed to version v2.0.0 just to express the fresh restart
+* Updated .pot file, plus packaged German translations
 
 
 #### Version 2016-08-19

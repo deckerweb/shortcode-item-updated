@@ -32,6 +32,8 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @since 2.1.0
  *
  * @uses get_user_locale() Returns current locale from user setting or if not set from get_locale().
+ *
+ * @return bool  TRUE if in German based context, FALSE otherwise.
  */
 function ddw_siu_is_german() {
 	
@@ -60,17 +62,21 @@ function ddw_siu_is_german() {
  * Reusable and translateable strings.
  * Preset for German locales --> saves the use of a translation file ... :-)
  *
- * @param string $type  Key of the string type to output.
+ * @since 2.1.0
+ *
+ * @param string  $type    Key of the string type to output.
  * @return string $string  Key of used language string.
  */
 function ddw_siu_strings( $type ) {
 	
+	/* translators: separator string between date and time values (a space plus @ symbol) */
 	$sep = ddw_siu_is_german() ? ', um' : _x(
 			'&#x00A0;@',
 			'Translators: separator string between date and time values (a space plus @ symbol)',
 			'shortcode-item-updated'
 		);
-		
+	
+	/* translators: Text before date/ time */	
 	$label_before = ddw_siu_is_german() ? 'Zuletzt aktualisiert:' : _x(
 			'Last updated:',
 			'Translators: Text before date/ time',
@@ -149,10 +155,8 @@ function ddw_siu_item_updated( $atts ) {
 			'show_date'    => 'yes',
 			'show_time'    => 'no',
 			'show_sep'     => 'no',
-			/* translators: separator string between date and time values (a space plus @ symbol) */
 			'sep'          => ddw_siu_strings( 'sep' ),
 			'show_label'   => 'no',
-			/* translators: Text before date/ time */
 			'label_before' => ddw_siu_strings( 'label_before' ),
 			'label_after'  => '',
 			'class'        => '',

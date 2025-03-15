@@ -9,7 +9,7 @@
 
 ---
 
-[Support Project](#support-the-project) | [Installation](#installation) | [Description](#description) | [Features](#features) | [Usage](#usage--examples) | [Shortcode Parameters](#shortcode-parameters) | [Bonus Shortcuts](#shortcode-parameters--bonus-shortcuts) | [Widgets](#widget-usage) | [Templates](#template-usage-developers) | [Filters](#plugin-filters--developers) | [Changelog](#changelog--version-history) | [Plugin Scope / Disclaimer](#plugin-scope--disclaimer)
+[Support Project](#support-the-project) | [Installation](#installation) | [Description](#description) | [Features](#features) | [Usage](#usage---examples) | [Shortcode Parameters](#shortcode-parameters) | [Bonus Shortcuts](#shortcode-parameters---bonus-shortcuts) | [Widgets](#widget-usage) | [Templates](#template-usage-developers) | [Filters](#plugin-filters-developers) | [Changelog](#changelog--version-history) | [Plugin Scope / Disclaimer](#plugin-scope--disclaimer)
 
 ---
 
@@ -30,7 +30,7 @@ Enjoying the plugin? Feel free to treat me to a cup of coffee ☕🙂 through th
 **Quick Install – as Plugin**
 1. **Download ZIP:** [**shortcode-item-updated.zip**](https://github.com/deckerweb/shortcode-item-updated/releases/latest/download/shortcode-item-updated.zip)
 2. Upload via WordPress Plugins > Add New > Upload Plugin
-3. Once activated, you can use the shortcode – [see Usage below](#usage--examples)
+3. Once activated, you can use the shortcode – [see Usage below](#usage---examples)
 
 **Alternative: Use as Code Snippet**
 1. Below, download the appropriate snippet version

@@ -3,7 +3,8 @@
  * Plugin Name:  Shortcode Item Updated
  * Plugin URI:   https://github.com/deckerweb/shortcode-item-updated
  * Description:  Shortcode for showing the last updated date (and/or time) of an item of a post type.
- * Version:      2.0.0
+ * Project:      Code Snippet: DDW Shortcode Item Updated
+ * Version:      2.1.0
  * Author:       David Decker – DECKERWEB
  * Author URI:   https://deckerweb.de/
  * License:      GPL-2.0+
@@ -13,13 +14,86 @@
  * Requires WP:  6.7
  * Requires PHP: 7.4
  *
- * Copyright (c) 2015-2025 David Decker – DECKERWEB
+ * Copyright: © 2015-2025, David Decker – DECKERWEB
  */
 
 /** Prevent direct access */
 if ( ! defined( 'ABSPATH' ) ) {
 	 exit;  // Exit if accessed directly.
 }
+
+
+/**
+ * Are we in German language context?
+ *
+ * @link https://wpml.org/faq/how-to-get-current-language-with-wpml/
+ * @link https://polylang.pro/doc/function-reference/
+ *
+ * @since 2.1.0
+ *
+ * @uses get_user_locale() Returns current locale from user setting or if not set from get_locale().
+ */
+function ddw_siu_is_german() {
+	
+	$german_locales = [ 'de_DE', 'de_DE_formal', 'de_AT', 'de_CH', 'de_LU' ];
+	$german_slugs   = [ 'de', 'at' ];
+	$wp_locale      = get_user_locale();
+	
+	/** WPML plugin: current language */
+	$wpml_current_lang = apply_filters( 'wpml_current_language', NULL );
+	
+	/** WordPress context – default */
+	if ( in_array( $wp_locale, $german_locales ) ) return TRUE;
+	
+	/** for WPML plugin */
+	elseif ( in_array( $wpml_current_lang, $german_slugs ) ) return TRUE;
+	
+	/** for Polylang plugin */
+	elseif ( function_exists( 'pll_current_language' ) && ( in_array( pll_current_language( 'slug' ), $german_slugs ) ) ) return TRUE;
+	
+	return FALSE;
+		
+}  // end function
+
+
+/**
+ * Reusable and translateable strings.
+ * Preset for German locales --> saves the use of a translation file ... :-)
+ *
+ * @param string $type  Key of the string type to output.
+ * @return string $string  Key of used language string.
+ */
+function ddw_siu_strings( $type ) {
+	
+	$sep = ddw_siu_is_german() ? ', um' : _x(
+			'&#x00A0;@',
+			'Translators: separator string between date and time values (a space plus @ symbol)',
+			'shortcode-item-updated'
+		);
+		
+	$label_before = ddw_siu_is_german() ? 'Zuletzt aktualisiert:' : _x(
+			'Last updated:',
+			'Translators: Text before date/ time',
+			'shortcode-item-updated'
+		);
+	
+	/** Check string type */
+	switch ( sanitize_key( $type ) ) {
+	
+		case 'sep':
+			$string = $sep;
+			break;
+		case 'label_after':
+			$string = $label_before;
+			break;
+		default:
+			$type = '';
+	
+	}  // end switch
+	
+	return $string;
+	
+}  // end function
 
 
 /**
@@ -55,8 +129,9 @@ add_shortcode( 'siu-item-updated', 'ddw_siu_item_updated' );
  *
  * @since  2015.05.25
  *
- * @uses   shortcode_atts() To parse Shortcode attributes.
- * @uses   ddw_siu_yes_no() To validate Shortcode attributes/ parameters.
+ * @uses   shortcode_atts()  To parse Shortcode attributes.
+ * @uses   ddw_siu_strings() To output translateable strings.
+ * @uses   ddw_siu_yes_no()  To validate Shortcode attributes/ parameters.
  *
  * @param  array $atts
  *
@@ -75,18 +150,10 @@ function ddw_siu_item_updated( $atts ) {
 			'show_time'    => 'no',
 			'show_sep'     => 'no',
 			/* translators: separator string between date and time values (a space plus @ symbol) */
-			'sep'          => _x(
-				'&#x00A0;@',
-				'Translators: separator string between date and time values (a space plus @ symbol)',
-				'shortcode-item-updated'
-			),
+			'sep'          => ddw_siu_strings( 'sep' ),
 			'show_label'   => 'no',
 			/* translators: Text before date/ time */
-			'label_before' => _x(
-				'Last updated:',
-				'Translators: Text before date/ time',
-				'shortcode-item-updated'
-			),
+			'label_before' => ddw_siu_strings( 'label_before' ),
 			'label_after'  => '',
 			'class'        => '',
 			'wrapper'      => 'span',
@@ -126,7 +193,7 @@ function ddw_siu_item_updated( $atts ) {
 		'<%1$s class="item-last-updated%2$s">%3$s%4$s%5$s</%1$s>',
 		strtolower( sanitize_html_class( $atts[ 'wrapper' ] ) ),
 		! empty( $atts[ 'class' ] ) ? ' ' . sanitize_html_class( $atts[ 'class' ] ) : '',
-		( 'yes' === ddw_siu_yes_no( $atts[ 'show_label' ] ) ) ? esc_html__( $atts[ 'label_before' ] ) . ' ' : '',
+		( 'yes' === ddw_siu_yes_no( $atts[ 'show_label' ] ) ) ? esc_html( $atts[ 'label_before' ] ) . ' ' : '',
 		( 'yes' === ddw_siu_yes_no( $atts[ 'show_date' ] ) ) ? $date_updated : '',
 		$time_display
 	);

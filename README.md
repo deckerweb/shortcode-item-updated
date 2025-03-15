@@ -9,6 +9,10 @@
 
 ---
 
+[Support Project](#support-the-project) | [Installation](#installation) | [Description](#description) | [Features](#features) | [Usage](#usage--examples) | [Shortcode Parameters](#shortcode-parameters) | [Bonus Shortcuts](#shortcode-parameters--bonus-shortcuts) | [Widgets](#widget-usage) | [Templates](#template-usage-developers) | [Filters](#plugin-filters--developers) | [Changelog](#changelog--version-history) | [Plugin Scope / Disclaimer](#plugin-scope--disclaimer)
+
+---
+
 ## Support the Project
 
 If you find this project helpful, consider showing your support by buying me a coffee! Your contribution helps me keep developing and improving this plugin.
@@ -17,6 +21,26 @@ Enjoying the plugin? Feel free to treat me to a cup of coffee ☕🙂 through th
 
 - [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W81BNTZE)
 - [Buy me a coffee](https://buymeacoffee.com/daveshine)
+- [PayPal donation](https://paypal.me/deckerweb)
+
+---
+
+## Installation
+
+**Quick Install – as Plugin**
+1. **Download ZIP:** [**shortcode-item-updated.zip**](https://github.com/deckerweb/shortcode-item-updated/releases/latest/download/shortcode-item-updated.zip)
+2. Upload via WordPress Plugins > Add New > Upload Plugin
+3. Once activated, you can use the shortcode – [see Usage below](#usage--examples)
+
+**Alternative: Use as Code Snippet**
+1. Below, download the appropriate snippet version
+2. activate or deactivate in your snippets plugin
+
+[**Download .json**](https://github.com/deckerweb/shortcode-item-updated/releases/latest/download/ddw-shortcode-item-updated.code-snippets.json) version for: _Code Snippets_ (free & Pro), _Advanced Scripts_ (Premium), _Scripts Organizer_ (Premium)
+--> just use their elegant script import features
+--> in _Scripts Organizer_ use the "Code Snippets Import"
+
+For all other snippet manager plugins just use our plugin's main .php file [`shortcode-item-updated.php`](https://github.com/deckerweb/shortcode-item-updated/blob/master/shortcode-item-updated.php) and use its content as snippet (bevor saving your snippet: please check for your plugin if the opening php tag needs to be removed or not!).
 
 ---
 
@@ -24,7 +48,7 @@ Enjoying the plugin? Feel free to treat me to a cup of coffee ☕🙂 through th
 
 Very useful to output the updated date of a custom post type item on a regular page, within a widget or anywhere else... :-)
 
-*Backstory:* I needed something like that for a client project to display the last updated date/time of a download post type on a regular content page. Since I knew, I would need the same functionality for an other existing site and maybe in future too, I just build it into a "general plugin" rather than a simple code snippet...! There were no existing plugins/solutions out there (at least I didn't found them yet...) that fitted my needs so I had to build it myself...
+*Backstory:* I needed something like that for a client project to display the last updated date/time of a download post type on a regular content page. Since I knew, I would need the same functionality for an other existing site and maybe in future too, I just build it into a "general plugin" rather than a simple code snippet...! There were no existing plugins/ solutions out there (at least I didn't found them yet...) that fitted my needs so I had to build it myself ...
 
 ---
 
@@ -36,15 +60,6 @@ Very useful to output the updated date of a custom post type item on a regular p
 * Developer friendly: customize or extend via filters, styles and styling-friendly CSS classes
 * Fully internationalized and translateable! -- German translations already packaged!
 * Developed with security in mind: proper WordPress coding standards and security functions - escape all the things! :)
-
----
-
-## Installation
-
-**Quick Install**
-1. **Download ZIP:** [**shortcode-item-updated.zip**](https://github.com/deckerweb/shortcode-item-updated/releases/latest/download/shortcode-item-updated.zip)
-2. Upload via WordPress Plugins > Add New > Upload Plugin
-3. Once activated, you can use the shortcode – see Usage below
 
 ---
 
@@ -131,7 +146,14 @@ NO LONGER recommended! Widgets are outdated, I do not recommend them (and _didn'
 
 ## Changelog – Version History
 
-#### v2.0.0 (March 2025)
+#### 🎉 v2.1.0 (2024-03-15)
+
+* Detection for German locales to run plugin without translation files for German sites – NOTE: you can use translations as before as well, nothing changes here. The two strings can also be modified in the Shortcode itself.
+* This (single file) plugin can alternatively be used as "code snippet version". Works perfectly fine in _Code Snippets_ (free & Pro), _FluentSnippets_, _WPCode_, _Advanced Scripts_, _Scripts Organizer_ and _WPCodeBox_ – NOTE: Use that way at your own risk and you have to care for updates yourself. – For download see under [Installation](#installation)
+* Few code improvements
+
+
+#### 🎉 v2.0.0 (2025-03-14)
 
 * Updated plugin after 9 years, yeah! – Brought back to its basic beauty. (How it should be!)
 * Removed additional translation loading – no longer needed; WordPress does now all we need by itself (yeah!)
@@ -142,14 +164,14 @@ NO LONGER recommended! Widgets are outdated, I do not recommend them (and _didn'
 * Updated .pot file, plus packaged German translations
 
 
-#### Version 2016-08-19
+#### 🎉 Version 2016-08-19
 
 * Updated Readme file
 * Updated .pot file plus German translations
 * Improved security and polishing of plugin
 
 
-#### Version 2016-08-12
+#### 🎉 Version 2016-08-12
 
 * Added Shortcut for German date format to get output `d.m.Y` like `12.08.2016` (Usage: `date_format="de"`)
 * Added Shortcut for U.S. date format to get output `Y-m-d` like `2016-08-12` (Usage: `date_format="us"`)
@@ -158,7 +180,7 @@ NO LONGER recommended! Widgets are outdated, I do not recommend them (and _didn'
 * Approved compatibility with WordPress 4.6
 
 
-#### Version 2015-05-26
+#### 🎉 Version 2015-05-26
 
 * Bugfix for variable name in translation loader
 * Refined Shortcode parameters
@@ -172,7 +194,7 @@ NO LONGER recommended! Widgets are outdated, I do not recommend them (and _didn'
 * Minor formatting stuff
 
 
-#### Version 2015-05-25
+#### 🎉 Version 2015-05-25
 
 * Initial release on GitHub
 

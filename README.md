@@ -146,7 +146,7 @@ NO LONGER recommended! Widgets are outdated, I do not recommend them (and _didn'
 
 ## Changelog – Version History
 
-#### 🎉 v2.1.0 (2024-03-15)
+#### 🎉 v2.1.0 (2025-03-15)
 
 * Detection for German locales to run plugin without translation files for German sites – NOTE: you can use translations as before as well, nothing changes here. The two strings can also be modified in the Shortcode itself.
 * This (single file) plugin can alternatively be used as "code snippet version". Works perfectly fine in _Code Snippets_ (free & Pro), _FluentSnippets_, _WPCode_, _Advanced Scripts_, _Scripts Organizer_ and _WPCodeBox_ – NOTE: Use that way at your own risk and you have to care for updates yourself. – For download see under [Installation](#installation)

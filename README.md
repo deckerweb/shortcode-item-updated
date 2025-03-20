@@ -2,6 +2,8 @@
 
 **Simple & lightweight:** Flexible Shortcode for showing the **last updated** date (and/or time) of an item of a post type.
 
+![Shortcode Item Updated plugin banner](https://repository-images.githubusercontent.com/36257371/b329de67-e904-47d5-998d-0031c49f59a1)
+
 ### Tested Compatibility
 - **WordPress**: 6.7.2
 - **PHP**: 8.3+

@@ -5,8 +5,8 @@
 ![Shortcode Item Updated plugin banner](https://repository-images.githubusercontent.com/36257371/b329de67-e904-47d5-998d-0031c49f59a1)
 
 ### Tested Compatibility
-- **WordPress**: 6.7.2
-- **PHP**: 8.3+
+- **WordPress**: 6.7.2 / 6.8 Beta
+- **PHP**: 8.0 – 8.3
 - Requires at least: WP 6.7 / PHP 7.4
 
 ---
@@ -30,12 +30,12 @@ Enjoying the plugin? Feel free to treat me to a cup of coffee ☕🙂 through th
 
 ## Installation
 
-**Quick Install – as Plugin**
+#### **Quick Install – as Plugin**
 1. **Download ZIP:** [**shortcode-item-updated.zip**](https://github.com/deckerweb/shortcode-item-updated/releases/latest/download/shortcode-item-updated.zip)
 2. Upload via WordPress Plugins > Add New > Upload Plugin
 3. Once activated, you can use the shortcode – [see Usage below](#usage---examples)
-
-**Alternative: Use as Code Snippet**
+ 
+#### **Alternative: Use as Code Snippet**
 1. Below, download the appropriate snippet version
 2. activate or deactivate in your snippets plugin
 
@@ -44,6 +44,8 @@ Enjoying the plugin? Feel free to treat me to a cup of coffee ☕🙂 through th
 --> in _Scripts Organizer_ use the "Code Snippets Import"
 
 For all other snippet manager plugins just use our plugin's main .php file [`shortcode-item-updated.php`](https://github.com/deckerweb/shortcode-item-updated/blob/master/shortcode-item-updated.php) and use its content as snippet (bevor saving your snippet: please check for your plugin if the opening php tag needs to be removed or not!).
+
+--> Please decide for one of both alternatives!
 
 ---
 
@@ -133,7 +135,7 @@ NO LONGER recommended! Widgets are outdated, I do not recommend them (and _didn'
 
 ## Template Usage (Developers)
 
-* Use WordPress' global "do_shortcode()" function as a template function, like so:
+* Use WordPress' global `do_shortcode()` function as a template function, like so:
 * `<?php do_shortcode( '[siu-item-updated post_id="123" show_label="yes"]' ); ?>` --> parameters apply like for regular Shortcode usage (see above)!
 * NOTE: You have to provide a unique post ID if using this outside of the Loop!
 
@@ -149,33 +151,35 @@ NO LONGER recommended! Widgets are outdated, I do not recommend them (and _didn'
 
 ## Changelog – Version History
 
-#### 🎉 v2.1.0 (2025-03-15)
+### 🎉 v2.2.0 – 2025-03-??
+* New: Transformed code into class-based approach (more future-proof)
+* Plugin: Add meta links on WP Plugins page
+* Alternate install: Use "plugin" as Code Snippet version – now officially promoted here in Readme and with downloadable .json file
 
+
+### 🎉 v2.1.0 – 2025-03-15
 * Detection for German locales to run plugin without translation files for German sites – NOTE: you can use translations as before as well, nothing changes here. The two strings can also be modified in the Shortcode itself.
 * This (single file) plugin can alternatively be used as "code snippet version". Works perfectly fine in _Code Snippets_ (free & Pro), _FluentSnippets_, _WPCode_, _Advanced Scripts_, _Scripts Organizer_ and _WPCodeBox_ – NOTE: Use that way at your own risk and you have to care for updates yourself. – For download see under [Installation](#installation)
 * Few code improvements
 
 
-#### 🎉 v2.0.0 (2025-03-14)
-
+### 🎉 v2.0.0 – 2025-03-14
 * Updated plugin after 9 years, yeah! – Brought back to its basic beauty. (How it should be!)
 * Removed additional translation loading – no longer needed; WordPress does now all we need by itself (yeah!)
 * Removed support for third-party plugin "Shortcode UI (Shortcake)" which is no longer maintained, and, to be honest, no longer needed
 * Brought changelog to Readme file here, CHANGES.md file removed
 * Changed plugins versioning from date-based to version number based, which makes more sense here
 * Changed to version v2.0.0 just to express the fresh restart
-* Updated .pot file, plus packaged German translations
+* Updated `.pot` file, plus packaged German translations
 
 
-#### 🎉 Version 2016-08-19
-
+### 🎉 Version 2016-08-19
 * Updated Readme file
 * Updated .pot file plus German translations
 * Improved security and polishing of plugin
 
 
-#### 🎉 Version 2016-08-12
-
+### 🎉 Version 2016-08-12
 * Added Shortcut for German date format to get output `d.m.Y` like `12.08.2016` (Usage: `date_format="de"`)
 * Added Shortcut for U.S. date format to get output `Y-m-d` like `2016-08-12` (Usage: `date_format="us"`)
 * Added support for plugin "Shortcake" to give Shortcode an UI :-)
@@ -183,8 +187,7 @@ NO LONGER recommended! Widgets are outdated, I do not recommend them (and _didn'
 * Approved compatibility with WordPress 4.6
 
 
-#### 🎉 Version 2015-05-26
-
+### 🎉 Version 2015-05-26
 * Bugfix for variable name in translation loader
 * Refined Shortcode parameters
 * Added label "Last updated:" (defaults to not being shown!)
@@ -197,12 +200,11 @@ NO LONGER recommended! Widgets are outdated, I do not recommend them (and _didn'
 * Minor formatting stuff
 
 
-#### 🎉 Version 2015-05-25
-
+### 🎉 Version 2015-05-25
 * Initial release on GitHub
 
 ---
 
 Icon used in promo graphics: © Remix Icon
 
-Copyright © 2015-2025 David Decker – DECKERWEB.de
+Copyright: © 2015-2025, David Decker – DECKERWEB.de

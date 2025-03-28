@@ -118,8 +118,15 @@ Will show only date (as set in WordPress Settings > General) for the item of a p
 
 ## Shortcode Parameters - Bonus Shortcuts
 
-* Shortcut for German date format to get output `d.m.Y` like `12.08.2016` (Usage: `date_format="de"`)
-* Shortcut for U.S. date format to get output `Y-m-d` like `2016-08-12` (Usage: `date_format="us"`)
+Shortcut for German date format to get output `d.m.Y` like `12.08.2016` – Usage:
+```
+date_format="de"
+```
+
+Shortcut for U.S. date format to get output `Y-m-d` like `2016-08-12` – Usage:
+```
+date_format="us"
+```
 
 ---
 
@@ -127,17 +134,25 @@ Will show only date (as set in WordPress Settings > General) for the item of a p
 
 NO LONGER recommended! Widgets are outdated, I do not recommend them (and _didn't_ use them myself for lots of years already!).
 
-* Shortcode could be used with "Text" widget -- if you have shortcodes for Widgets activated (possible via this filter: `add_filter( 'widget_text', 'do_shortcode' );` )
-* If using extended/ advanced text widget plugins, the Shortcode usage then is already enabled automatically... :-)
-* NOTE: You have to provide a unique post ID if using this outside of the Loop!
+Shortcode could be used with "Text" widget -- if you have shortcodes for Widgets activated. Possible via this filter:
+```
+add_filter( 'widget_text', 'do_shortcode' );
+```
+If using extended/ advanced text widget plugins, the Shortcode usage then is already enabled automatically... :-)
+
+NOTE: You have to provide a unique post ID if using this outside of the Loop!
 
 ---
 
 ## Template Usage (Developers)
 
-* Use WordPress' global `do_shortcode()` function as a template function, like so:
-* `<?php do_shortcode( '[siu-item-updated post_id="123" show_label="yes"]' ); ?>` --> parameters apply like for regular Shortcode usage (see above)!
-* NOTE: You have to provide a unique post ID if using this outside of the Loop!
+Use WordPress' global `do_shortcode()` function as a template function, like so:
+```
+<?php do_shortcode( '[siu-item-updated post_id="123" show_label="yes"]' ); ?>
+```
+--> parameters apply like for regular Shortcode usage (see above)!
+
+NOTE: You have to provide a unique post ID if using this outside of the Loop!
 
 ---
 
@@ -151,10 +166,10 @@ NO LONGER recommended! Widgets are outdated, I do not recommend them (and _didn'
 
 ## Changelog – Version History
 
-### 🎉 v2.2.0 – 2025-03-??
+### 🎉 v2.2.0 – 2025-03-28
 * New: Transformed code into class-based approach (more future-proof)
 * Plugin: Add meta links on WP Plugins page
-* Alternate install: Use "plugin" as Code Snippet version – now officially promoted here in Readme and with downloadable .json file
+* Alternate install: Use "plugin" as Code Snippet version – now officially promoted here in Readme and with downloadable `.json` file
 
 
 ### 🎉 v2.1.0 – 2025-03-15

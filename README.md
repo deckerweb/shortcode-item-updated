@@ -170,6 +170,7 @@ NOTE: You have to provide a unique post ID if using this outside of the Loop!
 * New: Transformed code into class-based approach (more future-proof)
 * Plugin: Add meta links on WP Plugins page
 * Alternate install: Use "plugin" as Code Snippet version – now officially promoted here in Readme and with downloadable `.json` file
+* Updated `.pot` file, plus packaged German translations
 
 
 ### 🎉 v2.1.0 – 2025-03-15

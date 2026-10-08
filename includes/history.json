@@ -1,0 +1,180 @@
+[
+  {
+    "version": "2.3.0",
+    "date": "2026-10-08",
+    "en": {
+      "New": [
+        "Conditional update display with a minimum time gap.",
+        "Latest update from multiple explicit post IDs.",
+        "Semantic time markup, unwrapped text and relative dates."
+      ],
+      "Improved": [
+        "Documented recipes, complete parameter reference and standalone snippet distributions.",
+        "Page-language labels, individual CSS classes and validated HTML wrappers."
+      ],
+      "Fixed": [
+        "The de/us shortcuts now show the source update date.",
+        "Restored the default label and suppressed invalid or unavailable sources.",
+        "Correct site-timezone formatting and separator/time suffix behavior."
+      ],
+      "Misc": [
+        "Bundled deckerweb Updater 2.1.0 and Library 0.8.1.",
+        "The plugin requires PHP 8.0; the standalone snippet still supports PHP 7.4."
+      ]
+    },
+    "de": {
+      "Neu": [
+        "Bedingte Aktualisierungsanzeige mit Mindestabstand.",
+        "Jüngster Aktualisierungsstand aus mehreren ausdrücklich angegebenen Beitrags-IDs.",
+        "Semantisches time-Markup, Textausgabe ohne Hüllelement und relative Datumsanzeige."
+      ],
+      "Verbessert": [
+        "Dokumentierte Anwendungsfälle, vollständige Parameterübersicht und eigenständige Snippet-Ausgaben.",
+        "Beschriftungen in der Seitensprache, einzelne CSS-Klassen und geprüfte HTML-Hüllelemente."
+      ],
+      "Behoben": [
+        "Die Kürzel de/us zeigen jetzt das Änderungsdatum der Quelle.",
+        "Standardbeschriftung wiederhergestellt; ungültige oder nicht verfügbare Quellen bleiben ohne Ausgabe.",
+        "Korrekte Website-Zeitzone sowie passende Trennzeichen und Uhrzeitzusätze."
+      ],
+      "Sonstiges": [
+        "deckerweb Updater 2.1.0 und Library 0.8.1 eingebunden.",
+        "Das Plugin benötigt PHP 8.0; das eigenständige Snippet unterstützt weiterhin PHP 7.4."
+      ]
+    }
+  },
+  {
+    "version": "2.2.0",
+    "date": "2025-03-28",
+    "en": {
+      "Improved": [
+        "Class-based shortcode implementation."
+      ],
+      "Misc": [
+        "Plugin metadata links, snippet download and updated German translations."
+      ]
+    },
+    "de": {
+      "Verbessert": [
+        "Klassenbasierte Shortcode-Implementierung."
+      ],
+      "Sonstiges": [
+        "Plugin-Metadatenlinks, Snippet-Download und aktualisierte deutsche Übersetzungen."
+      ]
+    }
+  },
+  {
+    "version": "2.1.0",
+    "date": "2025-03-15",
+    "en": {
+      "New": [
+        "German label defaults without separate translation files."
+      ],
+      "Improved": [
+        "Alternative use in PHP snippet managers."
+      ]
+    },
+    "de": {
+      "Neu": [
+        "Deutsche Standardbeschriftungen ohne separate Übersetzungsdateien."
+      ],
+      "Verbessert": [
+        "Alternative Verwendung in PHP-Snippet-Managern."
+      ]
+    }
+  },
+  {
+    "version": "2.0.0",
+    "date": "2025-03-14",
+    "en": {
+      "Improved": [
+        "Refreshed the lightweight shortcode plugin."
+      ],
+      "Misc": [
+        "Removed obsolete Shortcake integration; updated translations and version numbering."
+      ]
+    },
+    "de": {
+      "Verbessert": [
+        "Das schlanke Shortcode-Plugin aktualisiert."
+      ],
+      "Sonstiges": [
+        "Veraltete Shortcake-Integration entfernt; Übersetzungen und Versionsnummerierung aktualisiert."
+      ]
+    }
+  },
+  {
+    "version": "2016-08-19",
+    "date": "2016-08-19",
+    "en": {
+      "Improved": [
+        "Documentation, translations and output handling."
+      ]
+    },
+    "de": {
+      "Verbessert": [
+        "Dokumentation, Übersetzungen und Ausgabebehandlung."
+      ]
+    }
+  },
+  {
+    "version": "2016-08-12",
+    "date": "2016-08-12",
+    "en": {
+      "New": [
+        "German and ISO-style date shortcuts; Shortcake integration."
+      ],
+      "Improved": [
+        "Translations and WordPress 4.6 compatibility."
+      ]
+    },
+    "de": {
+      "Neu": [
+        "Deutsche und ISO-artige Datumskürzel sowie Shortcake-Integration."
+      ],
+      "Verbessert": [
+        "Übersetzungen und Kompatibilität mit WordPress 4.6."
+      ]
+    }
+  },
+  {
+    "version": "2015-05-26",
+    "date": "2015-05-26",
+    "en": {
+      "New": [
+        "Optional labels, translated separators and current-loop post defaults."
+      ],
+      "Fixed": [
+        "Translation-loader variable."
+      ],
+      "Improved": [
+        "Shortcode parameters and installation documentation."
+      ]
+    },
+    "de": {
+      "Neu": [
+        "Optionale Beschriftungen, übersetzte Trennzeichen und aktueller Loop-Beitrag als Standard."
+      ],
+      "Behoben": [
+        "Variable im Übersetzungslader."
+      ],
+      "Verbessert": [
+        "Shortcode-Parameter und Installationsdokumentation."
+      ]
+    }
+  },
+  {
+    "version": "2015-05-25",
+    "date": "2015-05-25",
+    "en": {
+      "New": [
+        "Initial public release."
+      ]
+    },
+    "de": {
+      "Neu": [
+        "Erste öffentliche Veröffentlichung."
+      ]
+    }
+  }
+]

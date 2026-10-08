@@ -1,226 +1,218 @@
 # Shortcode Item Updated
 
-**Simple & lightweight:** Flexible Shortcode for showing the **last updated** date (and/or time) of an item of a post type.
+![Shortcode Item Updated](assets/banner-github-en.png)
 
-![Shortcode Item Updated plugin banner](https://repository-images.githubusercontent.com/36257371/b329de67-e904-47d5-998d-0031c49f59a1)
+[Deutsch](README-de.md) · [User guide](docs/USER-GUIDE.md) · [FAQ by topic](docs/FAQ.md)
 
-### Tested Compatibility
-- **WordPress**: 6.7.2 / 6.8 Beta
-- **PHP**: 8.0 – 8.3
-- Requires at least: WP 6.7 / PHP 7.4
+Display the update date of a selected post, page or custom post type item wherever a WordPress shortcode is rendered. A download page can show the date of its separate download entry; a document overview can show the newest update across several items.
 
----
+**Version 2.3.0** · WordPress **6.7+** · Plugin: PHP **8.0+** · Standalone snippet: PHP **7.4+**
 
-[Support Project](#support-the-project) | [Installation](#installation) | [Description](#description) | [Features](#features) | [Usage](#usage---examples) | [Shortcode Parameters](#shortcode-parameters) | [Bonus Shortcuts](#shortcode-parameters---bonus-shortcuts) | [Widgets](#widget-usage) | [Templates](#template-usage-developers) | [Filters](#plugin-filters-developers) | [Changelog](#changelog--version-history) | [Plugin Scope / Disclaimer](#plugin-scope--disclaimer)
+[At a glance](#at-a-glance) · [Installation](#installation) · [Examples](#examples) · [Parameters](#shortcode-parameters) · [FAQ](#faq) · [Changelog](#changelog)
 
----
+## At a glance
 
-## Support the Project
-
-If you find this project helpful, consider showing your support by buying me a coffee! Your contribution helps me keep developing and improving this plugin.
-
-Enjoying the plugin? Feel free to treat me to a cup of coffee ☕🙂 through the following options:
-
-- [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W81BNTZE)
-- [Buy me a coffee](https://buymeacoffee.com/daveshine)
-- [PayPal donation](https://paypal.me/deckerweb)
-- [Join my **newsletter** for DECKERWEB WordPress Plugins](https://eepurl.com/gbAUUn)
-
----
+- One shortcode: `[siu-item-updated]`.
+- One explicit item, the current loop item or the latest update from a fixed list of IDs.
+- Optional update threshold, relative dates, semantic time markup and unwrapped text.
+- Site date/time defaults, custom labels and reusable CSS classes.
+- No settings page, automatic content insertion or frontend scripts.
+- Installable plugin with deckerweb Updater 2.1.0 and Library 0.8.1; a standalone snippet is also available.
 
 ## Installation
 
-#### **Quick Install – as Plugin**
-1. **Download ZIP:** [**shortcode-item-updated.zip**](https://github.com/deckerweb/shortcode-item-updated/releases/latest/download/shortcode-item-updated.zip)
-2. Upload via WordPress Plugins > Add New > Upload Plugin
-3. Once activated, you can use the shortcode – [see Usage below](#usage---examples)
- 
-#### **Alternative: Use as Code Snippet**
-1. Below, download the appropriate snippet version
-2. activate or deactivate in your snippets plugin
+Download the installable ZIP supplied with version 2.3.0. In **Plugins → Add New → Upload Plugin**, upload it and activate. There are no shortcode settings to configure.
 
-[**Download .json**](https://github.com/deckerweb/shortcode-item-updated/releases/latest/download/ddw-shortcode-item-updated.code-snippets.json) version for: _Code Snippets_ (free & Pro), _Advanced Scripts_ (Premium), _Scripts Organizer_ (Premium)
---> just use their elegant script import features
---> in _Scripts Organizer_ use the "Code Snippets Import"
+For an update from 2.2.0, back up your site and install the ZIP as a replacement. PHP 8.0 is now required for the plugin. Existing shortcode names, attributes and filters remain; see the [migration notes](docs/USER-GUIDE.md#migration-from-220).
 
-For all other snippet manager plugins just use our plugin's main .php file [`shortcode-item-updated.php`](https://github.com/deckerweb/shortcode-item-updated/blob/master/shortcode-item-updated.php) and use its content as snippet (bevor saving your snippet: please check for your plugin if the opening php tag needs to be removed or not!).
+For the snippet alternative, use the [manager-specific instructions](docs/SNIPPETS.md). Run the PHP snippet everywhere. Do not activate both distributions.
 
---> Please decide for one of both alternatives!
+## Examples
 
----
+IDs below are examples. Replace them with IDs from your own site. Sample output assumes a stored modification of June 3, 2020 at 12:34 in the site's timezone.
 
-## Description
+### Current article
 
-Very useful to output the updated date of a custom post type item on a regular page, within a widget or anywhere else... :-)
+Inside a reliable post loop, use:
 
-*Backstory:* I needed something like that for a client project to display the last updated date/time of a download post type on a regular content page. Since I knew, I would need the same functionality for an other existing site and maybe in future too, I just build it into a "general plugin" rather than a simple code snippet...! There were no existing plugins/ solutions out there (at least I didn't found them yet...) that fitted my needs so I had to build it myself ...
-
----
-
-## Features
-
-* Can be used in post/ page content (also post types), text widgets and also for page builder plugins etc.
-* Supports date/ time format from WordPress settings by default
-* Genesis Framework: easily use this in various footer/ simple edit plugins (don't forget post ID) or with the awesome Blox free/pro plugin and similar - it's that easy!
-* Developer friendly: customize or extend via filters, styles and styling-friendly CSS classes
-* Fully internationalized and translateable! -- German translations already packaged!
-* Developed with security in mind: proper WordPress coding standards and security functions - escape all the things! :)
-
----
-
-## Usage - Examples
-
-**Example - default:**
-
-```
-[siu-item-updated]
+```text
+[siu-item-updated show_label="yes"]
 ```
 
-Will show only date (as set in WordPress Settings > General) for the current displayed post (ID pulled via `get_the_ID()`) - has to be used within the Loop in this default state.
+The site's date format and page-language label are used automatically. With an English date format of `F j, Y`, the output is **Last updated: June 3, 2020**.
 
-**Example - custom 1:**
+### A download's date on its landing page
 
-```
-[siu-item-updated post_id="363"]
-```
+The landing page and download entry have different IDs. Reference the download entry explicitly:
 
-Will show only date (as set in WordPress Settings > General) for the item of a post type with post ID "363"
-
-**Example - custom 2:**
-
-```
-[siu-item-updated post_id="363" show_time="yes" show_sep="yes"]
+```text
+[siu-item-updated post_id="123" date_format="F j, Y" show_label="yes" label_before="Download updated:"]
 ```
 
-- Will also show the time
-- Will show a "separator" string between date and time values (sep)
+Output: **Download updated: June 3, 2020**. This is the WordPress entry's update date, not the filesystem timestamp of its uploaded file.
 
----
+### A document collection's newest update
 
-## Shortcode Parameters
-
-| Parameter | Description |  Default | Translateable
-|:----------:|:-------------|:------:|:-------------:|
-| `post_id` | ID of the post of any (public) post type | `get_the_ID()` = ID of the current displayed post -- in this case, Shortcode has to be used within the Loop!) | -- |
-| `date_format` | PHP date format | setting as in WordPress Settings > General | (automatically via `date_i18n()` ) |
-| `time_format` | PHP time format | setting as in WordPress Settings > General | (automatically via `date_i18n()` ) |
-| `show_date` | will display updated date, by default visible! | `yes` | -- |
-| `show_time` | `yes` will display time also | `no` | -- |
-| `show_sep` | `yes` will display separator string | `no` | -- |
-| `sep` | optional separator string | `&#x00A0;@` (that is a space plus @-symbol, like so: " @") | yes! |
-| `show_label` | `yes` will display a label string before date & time values | `no` | -- |
-| `label_before` | label string before date & time values | `Last updated:` (by default not shown) | yes! |
-| `label_after` | label string after time value -- useful for languages like German to get time values like "9.40 Uhr" (see the "Uhr" string) | "" (not displayed) | -- |
-| `class` | additional custom class for the wrapper | "" (none) | -- |
-| `wrapper` | HTML wrapper element - any HTML5 wrapper is possible | `span` | -- |
-
----
-
-## Shortcode Parameters - Bonus Shortcuts
-
-Shortcut for German date format to get output `d.m.Y` like `12.08.2016` – Usage:
-```
-date_format="de"
+```text
+[siu-item-updated post_ids="123,456,789" date_format="F j, Y" show_label="yes" label_before="Documents updated:"]
 ```
 
-Shortcut for U.S. date format to get output `Y-m-d` like `2016-08-12` – Usage:
+One date is shown: the newest valid, publicly viewable source's modification time. Missing/unavailable items are skipped. A malformed list produces no output.
+
+### Show only updates at least a day after publication
+
+```text
+[siu-item-updated post_id="123" only_if_updated="yes" min_update_gap="86400" show_label="yes"]
 ```
-date_format="us"
+
+This hides the date when the source was only saved at publication or within the first day. It compares timestamps; it does not assess the significance of an edit.
+
+### Date and 12-hour time
+
+```text
+[siu-item-updated post_id="123" date_format="F j, Y" show_time="yes" time_format="g:i a" show_sep="yes" sep=", at" show_label="yes"]
 ```
 
----
+Output: **Last updated: June 3, 2020, at 12:34 pm**.
 
-## Widget Usage
+### Relative wording
 
-NO LONGER recommended! Widgets are outdated, I do not recommend them (and _didn't_ use them myself for lots of years already!).
-
-Shortcode could be used with "Text" widget -- if you have shortcodes for Widgets activated. Possible via this filter:
+```text
+[siu-item-updated post_id="123" display="relative" show_label="yes"]
 ```
-add_filter( 'widget_text', 'do_shortcode' );
+
+Example: **Last updated: 3 days ago**. Relative output changes when the page is rendered again; it has no live browser timer.
+
+### Semantic markup or plain text
+
+```text
+[siu-item-updated post_id="123" semantic="yes" class="download-date muted"]
+[siu-item-updated post_id="123" output="text" date_format="iso"]
 ```
-If using extended/ advanced text widget plugins, the Shortcode usage then is already enabled automatically... :-)
 
-NOTE: You have to provide a unique post ID if using this outside of the Loop!
+The first produces a `<time datetime="…">` inside the normal wrapper. The second returns an unwrapped date such as **2020-06-03**. They are two separate examples. Semantic markup does not inject JSON-LD or promise a search-ranking effect.
 
----
+## Shortcode parameters
 
-## Template Usage (Developers)
+Boolean parameters accept `yes` or `no`; the historical German `ja` also enables them. Unknown boolean values act as `no`. Defaults preserve the simple absolute date output.
 
-Use WordPress' global `do_shortcode()` function as a template function, like so:
-```
-<?php do_shortcode( '[siu-item-updated post_id="123" show_label="yes"]' ); ?>
-```
---> parameters apply like for regular Shortcode usage (see above)!
+| Parameter | Default | Meaning |
+| --- | --- | --- |
+| `post_id` | Current loop item | Positive ID of one public post, page or custom post type item. Provide it outside a reliable post loop. |
+| `post_ids` | Empty | Comma-separated list of at most 100 positive IDs. Overrides post_id. The newest eligible modification wins. Duplicate IDs are removed. |
+| `date_format` | Site date format | PHP date format. Shortcuts: de = d.m.Y; us and iso = Y-m-d. The historical us shortcut is an ISO-style format, not month/day/year. |
+| `time_format` | Site time format | PHP time format, such as H:i or g:i a. Used only for absolute time output. |
+| `show_date` | yes | Show the absolute date. With relative mode, either show_date or show_time must remain enabled. |
+| `show_time` | no | Show the absolute time. Relative mode replaces the date/time combination with one duration. |
+| `show_sep` | no | Insert sep only when both absolute date and time are visible. |
+| `sep` | Nonbreaking space + @; German: , um | Plain-text separator. HTML entities are decoded and safely escaped for HTML output. |
+| `show_label` | no | Show label_before before the date/time or relative duration. |
+| `label_before` | Last updated: | Plain-text label in the page language. An explicit value overrides the default. |
+| `label_after` | Empty | Plain text after the absolute time, such as Uhr. Ignored without show_time and in relative mode. |
+| `class` | Empty | Additional CSS classes, separated by spaces. The original item-last-updated class remains. HTML mode only. |
+| `wrapper` | span | Allowed HTML wrapper. Unsupported values fall back to span. A time wrapper automatically receives datetime. HTML mode only. |
+| `only_if_updated` | no | Require modification strictly after publication. Applies separately to each source before selecting the newest. |
+| `min_update_gap` | 0 | Minimum publication-to-modification gap in whole seconds; 86400 = one day. The exact threshold qualifies. Used with only_if_updated=yes. |
+| `semantic` | no | Wrap the visible date/duration in time with an ISO 8601 datetime including the site timezone offset. HTML mode only. |
+| `output` | html | html returns escaped markup; text returns unwrapped text. Template callers must escape text for its final context. |
+| `display` | absolute | absolute uses the source date/time; relative shows a duration such as 3 days ago. Future timestamps use in 3 days. |
 
-NOTE: You have to provide a unique post ID if using this outside of the Loop!
+Full combinations, permitted wrappers, cache behavior and PHP/filter examples are in the [user guide](docs/USER-GUIDE.md).
 
----
+## FAQ
 
-## Plugin Filters (Developers)
+### Which content can I use?
 
-* `siu_filter_shortcode_defaults` --> filter default values of Shortcode parameters
-* `siu_filter_shortcode_item_updated` --> filter Shortcode output
-* `shortcode_atts_siu-item-updated` --> lets you add new Shortcode parameters for example (= WordPress' default Shortcode filter `shortcode_atts_{$shortcode}` )
+Published, publicly viewable posts, pages and custom post type items without a password. Drafts, private content, revisions, deleted posts and nonpublic types are skipped for everyone, including administrators.
 
----
+### Which date does it show?
 
-## Changelog – Version History
+WordPress's saved modification time, formatted in the site's timezone. It does not track the modification of an uploaded PDF, inspect remote files or distinguish editorial changes from routine saves.
 
-### 🎉 v2.2.0 – 2025-03-28
-* New: Transformed code into class-based approach (more future-proof)
-* Plugin: Add meta links on WP Plugins page
-* Alternate install: Use "plugin" as Code Snippet version – now officially promoted here in Readme and with downloadable `.json` file
-* Updated `.pot` file, plus packaged German translations
+### How do I reference another item?
 
+Use `post_id="123"`, or `post_ids="123,456,789"` for the newest eligible update. Replace the example IDs with IDs from your site. Outside a post loop, always specify a source.
 
-### 🎉 v2.1.0 – 2025-03-15
-* Detection for German locales to run plugin without translation files for German sites – NOTE: you can use translations as before as well, nothing changes here. The two strings can also be modified in the Shortcode itself.
-* This (single file) plugin can alternatively be used as "code snippet version". Works perfectly fine in _Code Snippets_ (free & Pro), _FluentSnippets_, _WPCode_, _Advanced Scripts_, _Scripts Organizer_ and _WPCodeBox_ – NOTE: Use that way at your own risk and you have to care for updates yourself. – For download see under [Installation](#installation)
-* Few code improvements
+### Why is nothing displayed?
 
+Check the ID and public visibility, the modification timestamp, `only_if_updated` and its threshold. A malformed ID list or invalid threshold fails without output. Both date and time disabled also produce no output.
 
-### 🎉 v2.0.0 – 2025-03-14
-* Updated plugin after 9 years, yeah! – Brought back to its basic beauty. (How it should be!)
-* Removed additional translation loading – no longer needed; WordPress does now all we need by itself (yeah!)
-* Removed support for third-party plugin "Shortcode UI (Shortcake)" which is no longer maintained, and, to be honest, no longer needed
-* Brought changelog to Readme file here, CHANGES.md file removed
-* Changed plugins versioning from date-based to version number based, which makes more sense here
-* Changed to version v2.0.0 just to express the fresh restart
-* Updated `.pot` file, plus packaged German translations
+### Will it work in my builder?
 
+Use the builder's shortcode element or a field that actually executes WordPress shortcodes. A field that treats the shortcode as literal text will not render it. In the block editor use the existing Shortcode block; this plugin adds no Gutenberg block.
 
-### 🎉 Version 2016-08-19
-* Updated Readme file
-* Updated .pot file plus German translations
-* Improved security and polishing of plugin
+### Can I use the snippet instead?
 
+Yes. It has the same shortcode features and supports PHP 7.4. Use one installation method. The standalone snippet contains no file-based Library, plugin updater or translation catalogs; updates are manual.
 
-### 🎉 Version 2016-08-12
-* Added Shortcut for German date format to get output `d.m.Y` like `12.08.2016` (Usage: `date_format="de"`)
-* Added Shortcut for U.S. date format to get output `Y-m-d` like `2016-08-12` (Usage: `date_format="us"`)
-* Added support for plugin "Shortcake" to give Shortcode an UI :-)
-* Updated and corrected translations
-* Approved compatibility with WordPress 4.6
+### Why can relative dates or another item's date look stale?
+
+Page caches store rendered output. Relative wording ages, and updating a referenced item may not purge the page displaying it. Purge that page or use your cache's dependency/exclusion features. Absolute output remains the default.
+
+[Full FAQ by topic](docs/FAQ.md).
 
 
-### 🎉 Version 2015-05-26
-* Bugfix for variable name in translation loader
-* Refined Shortcode parameters
-* Added label "Last updated:" (defaults to not being shown!)
-* Made separator string translateable (makes sense for a lot of languages to have a "sane default" then)
-* Added translations to the plugin; plus default .pot file and German translations
-* Added "get_the_ID()" as the default value of "post_id" parameter -- Note: in this case the Shortcode could be used as is [siu-item-updated] but within the Loop!
-* Added CHANGES.md file for changelogs
-* Added installations instructions to readme
-* Improved readme overall
-* Minor formatting stuff
+## Changelog
 
+### 2.3.0 — 2026-10-08
 
-### 🎉 Version 2015-05-25
-* Initial release on GitHub
+- **New:** Conditional update display with a minimum time gap.
+- **New:** Latest update from multiple explicit post IDs.
+- **New:** Semantic time markup, unwrapped text and relative dates.
+- **Improved:** Documented recipes, complete parameter reference and standalone snippet distributions.
+- **Improved:** Page-language labels, individual CSS classes and validated HTML wrappers.
+- **Fixed:** The de/us shortcuts now show the source update date.
+- **Fixed:** Restored the default label and suppressed invalid or unavailable sources.
+- **Fixed:** Correct site-timezone formatting and separator/time suffix behavior.
+- **Misc:** Bundled deckerweb Updater 2.1.0 and Library 0.8.1.
+- **Misc:** The plugin requires PHP 8.0; the standalone snippet still supports PHP 7.4.
 
----
+### 2.2.0 — 2025-03-28
 
-Icon used in promo graphics: © Remix Icon
+- **Improved:** Class-based shortcode implementation.
+- **Misc:** Plugin metadata links, snippet download and updated German translations.
 
-Copyright: © 2015-2025, David Decker – DECKERWEB.de
+### 2.1.0 — 2025-03-15
+
+- **New:** German label defaults without separate translation files.
+- **Improved:** Alternative use in PHP snippet managers.
+
+### 2.0.0 — 2025-03-14
+
+- **Improved:** Refreshed the lightweight shortcode plugin.
+- **Misc:** Removed obsolete Shortcake integration; updated translations and version numbering.
+
+### 2016-08-19 — 2016-08-19
+
+- **Improved:** Documentation, translations and output handling.
+
+### 2016-08-12 — 2016-08-12
+
+- **New:** German and ISO-style date shortcuts; Shortcake integration.
+- **Improved:** Translations and WordPress 4.6 compatibility.
+
+### 2015-05-26 — 2015-05-26
+
+- **New:** Optional labels, translated separators and current-loop post defaults.
+- **Fixed:** Translation-loader variable.
+- **Improved:** Shortcode parameters and installation documentation.
+
+[Complete release history](docs/CHANGELOG.md).
+
+## About the project
+
+Created in 2015 by David Decker to display a download item's update time on a separate content page. The plugin remains a small presentation tool. Minor releases add compatible optional features; patch releases correct behavior. Breaking changes are identified explicitly.
+
+## Issues, security and support
+
+Use [Issues](https://github.com/deckerweb/shortcode-item-updated/issues) for ordinary problems. Report security details privately through the repository's **Security → Report a vulnerability** route; see [security policy](SECURITY.md).
+
+Support continued maintenance: [Ko-fi](https://ko-fi.com/deckerweb), [Buy Me a Coffee](https://buymeacoffee.com/daveshine), [PayPal](https://paypal.me/deckerweb).
+
+## License and components
+
+Copyright © 2015–2026 David Decker – DECKERWEB. GPL-2.0-or-later. Bundled deckerweb Updater 2.1.0 and Library 0.8.1 are by David Decker and use GPL-2.0-or-later. Component sources: [Updater](https://github.com/deckerweb/deckerweb-updater), [Library](https://github.com/deckerweb/deckerweb-plugin-library). The runtime includes local component assets and translation resources. No premium plugin code is included.
+
+The shortcode makes no external requests. The updater contacts GitHub for update metadata and package downloads. The Library's online catalog is optional and initially off; installations and activations require deliberate user actions. There is no telemetry. The snippet makes no external requests. See [data and lifecycle](docs/DATA.md).
+
+Artwork uses the approved native vector design. WordPress banners use the same elements as the GitHub banner, cropping only the top and bottom. SVGs contain native shapes, outlined lettering and gradients, with no raster images, filters or external resources. PNGs are rendered directly from the same SVG sources. Montserrat is licensed under the SIL Open Font License 1.1; see the [font license](assets/FONT-LICENSE.txt).

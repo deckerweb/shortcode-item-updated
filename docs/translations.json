@@ -1,0 +1,1232 @@
+[
+  {
+    "context": "",
+    "id": "Documentation",
+    "de_DE": "Dokumentation",
+    "de_DE_formal": "Dokumentation"
+  },
+  {
+    "context": "",
+    "id": "Support this project",
+    "de_DE": "Dieses Projekt unterstützen",
+    "de_DE_formal": "Dieses Projekt unterstützen"
+  },
+  {
+    "context": "",
+    "id": "Display the latest update of selected posts, pages or custom post type items.",
+    "de_DE": "Den jüngsten Aktualisierungsstand ausgewählter Beiträge, Seiten oder Custom-Post-Type-Einträge anzeigen.",
+    "de_DE_formal": "Den jüngsten Aktualisierungsstand ausgewählter Beiträge, Seiten oder Custom-Post-Type-Einträge anzeigen."
+  },
+  {
+    "context": "",
+    "id": "Shortcode Item Updated updates are unavailable. Check the shared updater integration.",
+    "de_DE": "Updates für Shortcode Item Updated sind nicht verfügbar. Prüfe die Einbindung des gemeinsamen Updaters.",
+    "de_DE_formal": "Updates für Shortcode Item Updated sind nicht verfügbar. Prüfen Sie die Einbindung des gemeinsamen Updaters."
+  },
+  {
+    "context": "",
+    "id": "The update package does not match this plugin or its requirements.",
+    "de_DE": "Das Updatepaket passt nicht zu diesem Plugin oder seinen Systemanforderungen.",
+    "de_DE_formal": "Das Updatepaket passt nicht zu diesem Plugin oder seinen Systemanforderungen."
+  },
+  {
+    "context": "",
+    "id": "%s ago",
+    "de_DE": "vor %s",
+    "de_DE_formal": "vor %s"
+  },
+  {
+    "context": "",
+    "id": "in %s",
+    "de_DE": "in %s",
+    "de_DE_formal": "in %s"
+  },
+  {
+    "context": "Label before date and time",
+    "id": "Last updated:",
+    "de_DE": "Zuletzt aktualisiert:",
+    "de_DE_formal": "Zuletzt aktualisiert:"
+  },
+  {
+    "context": "Separator between date and time",
+    "id": " @",
+    "de_DE": ", um",
+    "de_DE_formal": ", um"
+  },
+  {
+    "context": "",
+    "id": "Private mode must be boolean.",
+    "de_DE": "Der Private-Modus muss ein boolescher Wert sein.",
+    "de_DE_formal": "Der Private-Modus muss ein boolescher Wert sein."
+  },
+  {
+    "context": "",
+    "id": "Invalid authentication provider.",
+    "de_DE": "Ungültiger Authentifizierungsanbieter.",
+    "de_DE_formal": "Ungültiger Authentifizierungsanbieter."
+  },
+  {
+    "context": "",
+    "id": "The plugin must be installed in a stable slug directory.",
+    "de_DE": "Das Plugin muss in einem Verzeichnis mit einem festen Slug installiert sein.",
+    "de_DE_formal": "Das Plugin muss in einem Verzeichnis mit einem festen Slug installiert sein."
+  },
+  {
+    "context": "",
+    "id": "Invalid GitHub repository URL.",
+    "de_DE": "Ungültige GitHub-Repository-URL.",
+    "de_DE_formal": "Ungültige GitHub-Repository-URL."
+  },
+  {
+    "context": "",
+    "id": "The private update could not be authorized. Check the repository credentials and refresh updates.",
+    "de_DE": "Das private Update konnte nicht autorisiert werden. Prüfe die Repository-Zugangsdaten und suche erneut nach Updates.",
+    "de_DE_formal": "Das private Update konnte nicht autorisiert werden. Prüfen Sie die Repository-Zugangsdaten und suchen Sie erneut nach Updates."
+  },
+  {
+    "context": "",
+    "id": "Could not create the update download file.",
+    "de_DE": "Die Datei für den Update-Download konnte nicht erstellt werden.",
+    "de_DE_formal": "Die Datei für den Update-Download konnte nicht erstellt werden."
+  },
+  {
+    "context": "",
+    "id": "The private update download failed. Check credentials and try again.",
+    "de_DE": "Der Download des privaten Updates ist fehlgeschlagen. Prüfe die Zugangsdaten und versuche es erneut.",
+    "de_DE_formal": "Der Download des privaten Updates ist fehlgeschlagen. Prüfen Sie die Zugangsdaten und versuchen Sie es erneut."
+  },
+  {
+    "context": "",
+    "id": "Could not access the update filesystem.",
+    "de_DE": "Auf das Dateisystem für das Update konnte nicht zugegriffen werden.",
+    "de_DE_formal": "Auf das Dateisystem für das Update konnte nicht zugegriffen werden."
+  },
+  {
+    "context": "",
+    "id": "GitHub release does not contain the plugin main file.",
+    "de_DE": "Der GitHub-Release enthält nicht die Hauptdatei des Plugins.",
+    "de_DE_formal": "Der GitHub-Release enthält nicht die Hauptdatei des Plugins."
+  },
+  {
+    "context": "",
+    "id": "Could not prepare the GitHub release package.",
+    "de_DE": "Das GitHub-Release-Paket konnte nicht vorbereitet werden.",
+    "de_DE_formal": "Das GitHub-Release-Paket konnte nicht vorbereitet werden."
+  },
+  {
+    "context": "",
+    "id": "See the release on GitHub.",
+    "de_DE": "Sieh dir den Release auf GitHub an.",
+    "de_DE_formal": "Sehen Sie sich den Release auf GitHub an."
+  },
+  {
+    "context": "",
+    "id": "%s is installed but inactive. Activate it first.",
+    "de_DE": "%s ist installiert, aber inaktiv. Bitte zuerst aktivieren.",
+    "de_DE_formal": "%s ist installiert, aber inaktiv. Bitte zuerst aktivieren."
+  },
+  {
+    "context": "",
+    "id": "%s is missing. Install and activate it first.",
+    "de_DE": "%s fehlt. Bitte zuerst installieren und aktivieren.",
+    "de_DE_formal": "%s fehlt. Bitte zuerst installieren und aktivieren."
+  },
+  {
+    "context": "",
+    "id": "%s must be network activated first.",
+    "de_DE": "%s muss zuerst netzwerkweit aktiviert werden.",
+    "de_DE_formal": "%s muss zuerst netzwerkweit aktiviert werden."
+  },
+  {
+    "context": "",
+    "id": "%s supports activation per site only.",
+    "de_DE": "%s unterstützt nur die Aktivierung je Website.",
+    "de_DE_formal": "%s unterstützt nur die Aktivierung je Website."
+  },
+  {
+    "context": "",
+    "id": "Activate",
+    "de_DE": "Aktivieren",
+    "de_DE_formal": "Aktivieren"
+  },
+  {
+    "context": "",
+    "id": "Activate Bricks QuickNav per site after selecting the Bricks parent or child theme.",
+    "de_DE": "Bricks QuickNav bitte je Website aktivieren, nachdem das Bricks-Theme oder ein Child-Theme ausgewählt wurde.",
+    "de_DE_formal": "Bricks QuickNav bitte je Website aktivieren, nachdem das Bricks-Theme oder ein Child-Theme ausgewählt wurde."
+  },
+  {
+    "context": "",
+    "id": "Activating…",
+    "de_DE": "Wird aktiviert…",
+    "de_DE_formal": "Wird aktiviert…"
+  },
+  {
+    "context": "",
+    "id": "Admin",
+    "de_DE": "Administration",
+    "de_DE_formal": "Administration"
+  },
+  {
+    "context": "",
+    "id": "All",
+    "de_DE": "Alle",
+    "de_DE_formal": "Alle"
+  },
+  {
+    "context": "",
+    "id": "Already active",
+    "de_DE": "Bereits aktiv",
+    "de_DE_formal": "Bereits aktiv"
+  },
+  {
+    "context": "",
+    "id": "Another action for this plugin is running. Please wait.",
+    "de_DE": "Für dieses Plugin läuft bereits eine Aktion. Bitte warten.",
+    "de_DE_formal": "Für dieses Plugin läuft bereits eine Aktion. Bitte warten."
+  },
+  {
+    "context": "",
+    "id": "Apr",
+    "de_DE": "Apr",
+    "de_DE_formal": "Apr"
+  },
+  {
+    "context": "",
+    "id": "April",
+    "de_DE": "April",
+    "de_DE_formal": "April"
+  },
+  {
+    "context": "",
+    "id": "Archive contains too many files.",
+    "de_DE": "Das Archiv enthält zu viele Dateien.",
+    "de_DE_formal": "Das Archiv enthält zu viele Dateien."
+  },
+  {
+    "context": "",
+    "id": "Archive symlinks are not permitted.",
+    "de_DE": "Symbolische Verknüpfungen sind im Archiv nicht erlaubt.",
+    "de_DE_formal": "Symbolische Verknüpfungen sind im Archiv nicht erlaubt."
+  },
+  {
+    "context": "",
+    "id": "As of ",
+    "de_DE": "Stand: ",
+    "de_DE_formal": "Stand: "
+  },
+  {
+    "context": "",
+    "id": "Aug",
+    "de_DE": "Aug",
+    "de_DE_formal": "Aug"
+  },
+  {
+    "context": "",
+    "id": "August",
+    "de_DE": "August",
+    "de_DE_formal": "August"
+  },
+  {
+    "context": "",
+    "id": "Back to deckerweb",
+    "de_DE": "Zurück zu deckerweb",
+    "de_DE_formal": "Zurück zu deckerweb"
+  },
+  {
+    "context": "",
+    "id": "Builder",
+    "de_DE": "Builder",
+    "de_DE_formal": "Builder"
+  },
+  {
+    "context": "",
+    "id": "Cannot create temporary file.",
+    "de_DE": "Temporäre Datei konnte nicht erstellt werden.",
+    "de_DE_formal": "Temporäre Datei konnte nicht erstellt werden."
+  },
+  {
+    "context": "",
+    "id": "Cannot create verified archive.",
+    "de_DE": "Geprüftes Archiv konnte nicht erstellt werden.",
+    "de_DE_formal": "Geprüftes Archiv konnte nicht erstellt werden."
+  },
+  {
+    "context": "",
+    "id": "Cannot finalize archive.",
+    "de_DE": "Archiv konnte nicht abgeschlossen werden.",
+    "de_DE_formal": "Archiv konnte nicht abgeschlossen werden."
+  },
+  {
+    "context": "",
+    "id": "Cannot normalize archive.",
+    "de_DE": "Archiv konnte nicht aufbereitet werden.",
+    "de_DE_formal": "Archiv konnte nicht aufbereitet werden."
+  },
+  {
+    "context": "",
+    "id": "Cannot read archive entry.",
+    "de_DE": "Archiveintrag konnte nicht gelesen werden.",
+    "de_DE_formal": "Archiveintrag konnte nicht gelesen werden."
+  },
+  {
+    "context": "",
+    "id": "Catalog URL",
+    "de_DE": "Katalog-URL",
+    "de_DE_formal": "Katalog-URL"
+  },
+  {
+    "context": "",
+    "id": "Changelog",
+    "de_DE": "Änderungsverlauf",
+    "de_DE_formal": "Änderungsverlauf"
+  },
+  {
+    "context": "",
+    "id": "Check status",
+    "de_DE": "Status prüfen",
+    "de_DE_formal": "Status prüfen"
+  },
+  {
+    "context": "",
+    "id": "Checking status…",
+    "de_DE": "Status wird geprüft…",
+    "de_DE_formal": "Status wird geprüft…"
+  },
+  {
+    "context": "",
+    "id": "Close",
+    "de_DE": "Schließen",
+    "de_DE_formal": "Schließen"
+  },
+  {
+    "context": "",
+    "id": "Commerce",
+    "de_DE": "Commerce",
+    "de_DE_formal": "Commerce"
+  },
+  {
+    "context": "",
+    "id": "Compatible additions only",
+    "de_DE": "Nur passende Ergänzungen",
+    "de_DE_formal": "Nur passende Ergänzungen"
+  },
+  {
+    "context": "",
+    "id": "Content",
+    "de_DE": "Inhalte",
+    "de_DE_formal": "Inhalte"
+  },
+  {
+    "context": "",
+    "id": "Dec",
+    "de_DE": "Dez",
+    "de_DE_formal": "Dez"
+  },
+  {
+    "context": "",
+    "id": "December",
+    "de_DE": "Dezember",
+    "de_DE_formal": "Dezember"
+  },
+  {
+    "context": "",
+    "id": "Delete Library settings when removing the last host plugin",
+    "de_DE": "Library-Einstellungen beim Entfernen des letzten Host-Plugins ebenfalls löschen",
+    "de_DE_formal": "Library-Einstellungen beim Entfernen des letzten Host-Plugins ebenfalls löschen"
+  },
+  {
+    "context": "",
+    "id": "Details & requirements",
+    "de_DE": "Details & Voraussetzungen",
+    "de_DE_formal": "Details & Voraussetzungen"
+  },
+  {
+    "context": "",
+    "id": "Discover more plugins by deckerweb",
+    "de_DE": "Weitere Plugins von deckerweb entdecken",
+    "de_DE_formal": "Weitere Plugins von deckerweb entdecken"
+  },
+  {
+    "context": "",
+    "id": "Dismiss permanently",
+    "de_DE": "Dauerhaft schließen",
+    "de_DE_formal": "Dauerhaft schließen"
+  },
+  {
+    "context": "",
+    "id": "Done. The plugin is active.",
+    "de_DE": "Erledigt. Das Plugin ist aktiv.",
+    "de_DE_formal": "Erledigt. Das Plugin ist aktiv."
+  },
+  {
+    "context": "",
+    "id": "Enter a catalog URL first.",
+    "de_DE": "Bitte zuerst eine Katalog-URL eintragen.",
+    "de_DE_formal": "Bitte zuerst eine Katalog-URL eintragen."
+  },
+  {
+    "context": "",
+    "id": "Expanded archive is too large.",
+    "de_DE": "Das entpackte Archiv ist zu groß.",
+    "de_DE_formal": "Das entpackte Archiv ist zu groß."
+  },
+  {
+    "context": "",
+    "id": "F j, Y",
+    "de_DE": "j. F Y",
+    "de_DE_formal": "j. F Y"
+  },
+  {
+    "context": "",
+    "id": "Feb",
+    "de_DE": "Feb",
+    "de_DE_formal": "Feb"
+  },
+  {
+    "context": "",
+    "id": "February",
+    "de_DE": "Februar",
+    "de_DE_formal": "Februar"
+  },
+  {
+    "context": "",
+    "id": "Filesystem credentials are required.",
+    "de_DE": "Zugangsdaten für das Dateisystem werden benötigt.",
+    "de_DE_formal": "Zugangsdaten für das Dateisystem werden benötigt."
+  },
+  {
+    "context": "",
+    "id": "Filter",
+    "de_DE": "Filtern",
+    "de_DE_formal": "Filtern"
+  },
+  {
+    "context": "",
+    "id": "Fits my installation",
+    "de_DE": "Passt zu meiner Installation",
+    "de_DE_formal": "Passt zu meiner Installation"
+  },
+  {
+    "context": "",
+    "id": "Fixed",
+    "de_DE": "Behoben",
+    "de_DE_formal": "Behoben"
+  },
+  {
+    "context": "",
+    "id": "Fri",
+    "de_DE": "Fr",
+    "de_DE_formal": "Fr"
+  },
+  {
+    "context": "",
+    "id": "Friday",
+    "de_DE": "Freitag",
+    "de_DE_formal": "Freitag"
+  },
+  {
+    "context": "",
+    "id": "GitHub Stars",
+    "de_DE": "GitHub-Sterne",
+    "de_DE_formal": "GitHub-Sterne"
+  },
+  {
+    "context": "",
+    "id": "Hide catalog",
+    "de_DE": "Katalog ausblenden",
+    "de_DE_formal": "Katalog ausblenden"
+  },
+  {
+    "context": "",
+    "id": "Improved",
+    "de_DE": "Verbessert",
+    "de_DE_formal": "Verbessert"
+  },
+  {
+    "context": "",
+    "id": "Install and activate this plugin in the network admin.",
+    "de_DE": "Dieses Plugin bitte im Netzwerk-Admin installieren und aktivieren.",
+    "de_DE_formal": "Dieses Plugin bitte im Netzwerk-Admin installieren und aktivieren."
+  },
+  {
+    "context": "",
+    "id": "Install deckerweb plugin",
+    "de_DE": "deckerweb-Plugin installieren",
+    "de_DE_formal": "deckerweb-Plugin installieren"
+  },
+  {
+    "context": "",
+    "id": "Install now",
+    "de_DE": "Jetzt installieren",
+    "de_DE_formal": "Jetzt installieren"
+  },
+  {
+    "context": "",
+    "id": "Installation cancelled.",
+    "de_DE": "Installation abgebrochen.",
+    "de_DE_formal": "Installation abgebrochen."
+  },
+  {
+    "context": "",
+    "id": "Installation failed.",
+    "de_DE": "Installation fehlgeschlagen.",
+    "de_DE_formal": "Installation fehlgeschlagen."
+  },
+  {
+    "context": "",
+    "id": "Installed",
+    "de_DE": "Installiert",
+    "de_DE_formal": "Installiert"
+  },
+  {
+    "context": "",
+    "id": "Installed: ",
+    "de_DE": "Installiert: ",
+    "de_DE_formal": "Installiert: "
+  },
+  {
+    "context": "",
+    "id": "Installing…",
+    "de_DE": "Wird installiert…",
+    "de_DE_formal": "Wird installiert…"
+  },
+  {
+    "context": "",
+    "id": "Invalid ZIP archive.",
+    "de_DE": "Ungültiges ZIP-Archiv.",
+    "de_DE_formal": "Ungültiges ZIP-Archiv."
+  },
+  {
+    "context": "",
+    "id": "Invalid approval flag.",
+    "de_DE": "Ungültige Freigabeangabe.",
+    "de_DE_formal": "Ungültige Freigabeangabe."
+  },
+  {
+    "context": "",
+    "id": "Invalid catalog field: ",
+    "de_DE": "Ungültiges Katalogfeld: ",
+    "de_DE_formal": "Ungültiges Katalogfeld: "
+  },
+  {
+    "context": "",
+    "id": "Invalid catalog revision.",
+    "de_DE": "Ungültiger Katalogstand.",
+    "de_DE_formal": "Ungültiger Katalogstand."
+  },
+  {
+    "context": "",
+    "id": "Invalid catalog schema.",
+    "de_DE": "Ungültiges Katalogformat.",
+    "de_DE_formal": "Ungültiges Katalogformat."
+  },
+  {
+    "context": "",
+    "id": "Invalid catalog timestamp.",
+    "de_DE": "Ungültiger Katalogzeitpunkt.",
+    "de_DE_formal": "Ungültiger Katalogzeitpunkt."
+  },
+  {
+    "context": "",
+    "id": "Invalid dependencies.",
+    "de_DE": "Ungültige Abhängigkeiten.",
+    "de_DE_formal": "Ungültige Abhängigkeiten."
+  },
+  {
+    "context": "",
+    "id": "Invalid dependency URL.",
+    "de_DE": "Ungültige URL einer Abhängigkeit.",
+    "de_DE_formal": "Ungültige URL einer Abhängigkeit."
+  },
+  {
+    "context": "",
+    "id": "Invalid dependency metadata.",
+    "de_DE": "Ungültige Angaben zu Abhängigkeiten.",
+    "de_DE_formal": "Ungültige Angaben zu Abhängigkeiten."
+  },
+  {
+    "context": "",
+    "id": "Invalid display field.",
+    "de_DE": "Ungültiges Anzeigefeld.",
+    "de_DE_formal": "Ungültiges Anzeigefeld."
+  },
+  {
+    "context": "",
+    "id": "Invalid icon color.",
+    "de_DE": "Ungültige Icon-Farbe.",
+    "de_DE_formal": "Ungültige Icon-Farbe."
+  },
+  {
+    "context": "",
+    "id": "Invalid icon label.",
+    "de_DE": "Ungültiges Icon-Kürzel.",
+    "de_DE_formal": "Ungültiges Icon-Kürzel."
+  },
+  {
+    "context": "",
+    "id": "Invalid identity or release metadata.",
+    "de_DE": "Ungültige Plugin- oder Release-Angaben.",
+    "de_DE_formal": "Ungültige Plugin- oder Release-Angaben."
+  },
+  {
+    "context": "",
+    "id": "Invalid local icon.",
+    "de_DE": "Ungültiges lokales Icon.",
+    "de_DE_formal": "Ungültiges lokales Icon."
+  },
+  {
+    "context": "",
+    "id": "Invalid network policy.",
+    "de_DE": "Ungültige Netzwerkregel.",
+    "de_DE_formal": "Ungültige Netzwerkregel."
+  },
+  {
+    "context": "",
+    "id": "Invalid network requirement.",
+    "de_DE": "Ungültige Netzwerkanforderung.",
+    "de_DE_formal": "Ungültige Netzwerkanforderung."
+  },
+  {
+    "context": "",
+    "id": "Invalid platform version.",
+    "de_DE": "Ungültige Plattformversion.",
+    "de_DE_formal": "Ungültige Plattformversion."
+  },
+  {
+    "context": "",
+    "id": "Invalid plugin series.",
+    "de_DE": "Ungültige Plugin-Serie.",
+    "de_DE_formal": "Ungültige Plugin-Serie."
+  },
+  {
+    "context": "",
+    "id": "Invalid star count.",
+    "de_DE": "Ungültige Anzahl der GitHub-Sterne.",
+    "de_DE_formal": "Ungültige Anzahl der GitHub-Sterne."
+  },
+  {
+    "context": "",
+    "id": "Invalid stars date.",
+    "de_DE": "Ungültiges Datum der GitHub-Sterne.",
+    "de_DE_formal": "Ungültiges Datum der GitHub-Sterne."
+  },
+  {
+    "context": "",
+    "id": "Jan",
+    "de_DE": "Jan",
+    "de_DE_formal": "Jan"
+  },
+  {
+    "context": "",
+    "id": "January",
+    "de_DE": "Januar",
+    "de_DE_formal": "Januar"
+  },
+  {
+    "context": "",
+    "id": "Jul",
+    "de_DE": "Jul",
+    "de_DE_formal": "Jul"
+  },
+  {
+    "context": "",
+    "id": "July",
+    "de_DE": "Juli",
+    "de_DE_formal": "Juli"
+  },
+  {
+    "context": "",
+    "id": "Jun",
+    "de_DE": "Jun",
+    "de_DE_formal": "Jun"
+  },
+  {
+    "context": "",
+    "id": "June",
+    "de_DE": "Juni",
+    "de_DE_formal": "Juni"
+  },
+  {
+    "context": "",
+    "id": "Library",
+    "de_DE": "Library",
+    "de_DE_formal": "Library"
+  },
+  {
+    "context": "",
+    "id": "Library changelog",
+    "de_DE": "Library-Änderungsverlauf",
+    "de_DE_formal": "Library-Änderungsverlauf"
+  },
+  {
+    "context": "",
+    "id": "Library settings",
+    "de_DE": "Library-Einstellungen",
+    "de_DE_formal": "Library-Einstellungen"
+  },
+  {
+    "context": "",
+    "id": "Library settings saved.",
+    "de_DE": "Library-Einstellungen gespeichert.",
+    "de_DE_formal": "Library-Einstellungen gespeichert."
+  },
+  {
+    "context": "",
+    "id": "Manage Content",
+    "de_DE": "Inhalte verwalten",
+    "de_DE_formal": "Inhalte verwalten"
+  },
+  {
+    "context": "",
+    "id": "Manage installed plugins",
+    "de_DE": "Installierte Plugins verwalten",
+    "de_DE_formal": "Installierte Plugins verwalten"
+  },
+  {
+    "context": "",
+    "id": "Mar",
+    "de_DE": "Mär",
+    "de_DE_formal": "Mär"
+  },
+  {
+    "context": "",
+    "id": "March",
+    "de_DE": "März",
+    "de_DE_formal": "März"
+  },
+  {
+    "context": "",
+    "id": "May",
+    "de_DE": "Mai",
+    "de_DE_formal": "Mai"
+  },
+  {
+    "context": "",
+    "id": "Misc",
+    "de_DE": "Sonstiges",
+    "de_DE_formal": "Sonstiges"
+  },
+  {
+    "context": "",
+    "id": "Missing display text.",
+    "de_DE": "Anzeigetext fehlt.",
+    "de_DE_formal": "Anzeigetext fehlt."
+  },
+  {
+    "context": "",
+    "id": "Missing plugin header.",
+    "de_DE": "Plugin-Header fehlt.",
+    "de_DE_formal": "Plugin-Header fehlt."
+  },
+  {
+    "context": "",
+    "id": "Mon",
+    "de_DE": "Mo",
+    "de_DE_formal": "Mo"
+  },
+  {
+    "context": "",
+    "id": "Monday",
+    "de_DE": "Montag",
+    "de_DE_formal": "Montag"
+  },
+  {
+    "context": "",
+    "id": "More by deckerweb",
+    "de_DE": "Mehr von deckerweb",
+    "de_DE_formal": "Mehr von deckerweb"
+  },
+  {
+    "context": "",
+    "id": "Multisite",
+    "de_DE": "Multisite",
+    "de_DE_formal": "Multisite"
+  },
+  {
+    "context": "",
+    "id": "Network activate",
+    "de_DE": "Netzwerkweit aktivieren",
+    "de_DE_formal": "Netzwerkweit aktivieren"
+  },
+  {
+    "context": "",
+    "id": "Network permission denied.",
+    "de_DE": "Keine Berechtigung für das Netzwerk.",
+    "de_DE_formal": "Keine Berechtigung für das Netzwerk."
+  },
+  {
+    "context": "",
+    "id": "New",
+    "de_DE": "Neu",
+    "de_DE_formal": "Neu"
+  },
+  {
+    "context": "",
+    "id": "No approved plugins match this selection.",
+    "de_DE": "Keine freigegebenen Plugins passen zu dieser Auswahl.",
+    "de_DE_formal": "Keine freigegebenen Plugins passen zu dieser Auswahl."
+  },
+  {
+    "context": "",
+    "id": "Not installed. You can try again.",
+    "de_DE": "Nicht installiert. Ein erneuter Versuch ist möglich.",
+    "de_DE_formal": "Nicht installiert. Ein erneuter Versuch ist möglich."
+  },
+  {
+    "context": "",
+    "id": "Nov",
+    "de_DE": "Nov",
+    "de_DE_formal": "Nov"
+  },
+  {
+    "context": "",
+    "id": "November",
+    "de_DE": "November",
+    "de_DE_formal": "November"
+  },
+  {
+    "context": "",
+    "id": "Oct",
+    "de_DE": "Okt",
+    "de_DE_formal": "Okt"
+  },
+  {
+    "context": "",
+    "id": "October",
+    "de_DE": "Oktober",
+    "de_DE_formal": "Oktober"
+  },
+  {
+    "context": "",
+    "id": "Off by default. Applies only when no other host is installed, including inactive hosts. Removes Library settings, installation records and introduction status. Installed plugins, their content and other plugin settings remain unchanged. Network data is shared across sites.",
+    "de_DE": "Standardmäßig ausgeschaltet. Gilt nur, wenn kein weiterer Host installiert ist, auch kein deaktivierter. Entfernt Library-Einstellungen, Installationszuordnung und den Status des Einführungshinweises. Installierte Plugins, deren Inhalte und Einstellungen anderer Plugins bleiben erhalten. Netzwerkdaten werden gemeinsam von den Websites genutzt.",
+    "de_DE_formal": "Standardmäßig ausgeschaltet. Gilt nur, wenn kein weiterer Host installiert ist, auch kein deaktivierter. Entfernt Library-Einstellungen, Installationszuordnung und den Status des Einführungshinweises. Installierte Plugins, deren Inhalte und Einstellungen anderer Plugins bleiben erhalten. Netzwerkdaten werden gemeinsam von den Websites genutzt."
+  },
+  {
+    "context": "",
+    "id": "Online catalog",
+    "de_DE": "Online-Katalog",
+    "de_DE_formal": "Online-Katalog"
+  },
+  {
+    "context": "",
+    "id": "Only HTTPS on raw.githubusercontent.com/deckerweb. The server receives the requesting IP address. GitHub is contacted when installing a release.",
+    "de_DE": "Nur HTTPS auf raw.githubusercontent.com/deckerweb. Der Server sieht die anfragende IP-Adresse. Beim Installieren eines Releases wird GitHub kontaktiert.",
+    "de_DE_formal": "Nur HTTPS auf raw.githubusercontent.com/deckerweb. Der Server sieht die anfragende IP-Adresse. Beim Installieren eines Releases wird GitHub kontaktiert."
+  },
+  {
+    "context": "",
+    "id": "Only approved releases",
+    "de_DE": "Nur freigegebene Releases",
+    "de_DE_formal": "Nur freigegebene Releases"
+  },
+  {
+    "context": "",
+    "id": "Open catalog",
+    "de_DE": "Katalog öffnen",
+    "de_DE_formal": "Katalog öffnen"
+  },
+  {
+    "context": "",
+    "id": "Optional. The bundled catalog works immediately. Catalog requests are cached for 24 hours. No site URL, plugin list or usage data is sent.",
+    "de_DE": "Optional. Der mitgelieferte Katalog funktioniert sofort. Katalogabfragen werden 24 Stunden zwischengespeichert. Keine Website-URL, Plugin-Liste oder Nutzungsdaten werden übertragen.",
+    "de_DE_formal": "Optional. Der mitgelieferte Katalog funktioniert sofort. Katalogabfragen werden 24 Stunden zwischengespeichert. Keine Website-URL, Plugin-Liste oder Nutzungsdaten werden übertragen."
+  },
+  {
+    "context": "",
+    "id": "PHP ZIP support is required.",
+    "de_DE": "PHP-ZIP-Unterstützung wird benötigt.",
+    "de_DE_formal": "PHP-ZIP-Unterstützung wird benötigt."
+  },
+  {
+    "context": "",
+    "id": "POST required.",
+    "de_DE": "Eine POST-Anfrage ist erforderlich.",
+    "de_DE_formal": "Eine POST-Anfrage ist erforderlich."
+  },
+  {
+    "context": "",
+    "id": "Permission denied.",
+    "de_DE": "Keine Berechtigung.",
+    "de_DE_formal": "Keine Berechtigung."
+  },
+  {
+    "context": "",
+    "id": "Planned: ",
+    "de_DE": "Geplant: ",
+    "de_DE_formal": "Geplant: "
+  },
+  {
+    "context": "",
+    "id": "Plugin identity or version does not match the catalog.",
+    "de_DE": "Plugin oder Version stimmt nicht mit dem Katalog überein.",
+    "de_DE_formal": "Plugin oder Version stimmt nicht mit dem Katalog überein."
+  },
+  {
+    "context": "",
+    "id": "Plugin is not installed.",
+    "de_DE": "Das Plugin ist nicht installiert.",
+    "de_DE_formal": "Das Plugin ist nicht installiert."
+  },
+  {
+    "context": "",
+    "id": "Plugin series",
+    "de_DE": "Plugin-Serien",
+    "de_DE_formal": "Plugin-Serien"
+  },
+  {
+    "context": "",
+    "id": "Product website",
+    "de_DE": "Produktwebsite",
+    "de_DE_formal": "Produktwebsite"
+  },
+  {
+    "context": "",
+    "id": "Refresh catalog",
+    "de_DE": "Katalog aktualisieren",
+    "de_DE_formal": "Katalog aktualisieren"
+  },
+  {
+    "context": "",
+    "id": "Release 1.0.0 is being prepared. Installation will be available after package verification.",
+    "de_DE": "Release 1.0.0 wird vorbereitet. Die Installation ist nach Prüfung des Pakets verfügbar.",
+    "de_DE_formal": "Release 1.0.0 wird vorbereitet. Die Installation ist nach Prüfung des Pakets verfügbar."
+  },
+  {
+    "context": "",
+    "id": "Release checksum is verified before installation. Activation is a separate step.",
+    "de_DE": "Vor der Installation wird die Release-Prüfsumme geprüft. Die Aktivierung erfolgt separat.",
+    "de_DE_formal": "Vor der Installation wird die Release-Prüfsumme geprüft. Die Aktivierung erfolgt separat."
+  },
+  {
+    "context": "",
+    "id": "Release in preparation",
+    "de_DE": "Release in Vorbereitung",
+    "de_DE_formal": "Release in Vorbereitung"
+  },
+  {
+    "context": "",
+    "id": "Release must contain exactly the approved plugin directory.",
+    "de_DE": "Das Release muss genau das freigegebene Plugin-Verzeichnis enthalten.",
+    "de_DE_formal": "Das Release muss genau das freigegebene Plugin-Verzeichnis enthalten."
+  },
+  {
+    "context": "",
+    "id": "Repository & documentation",
+    "de_DE": "Repository & Dokumentation",
+    "de_DE_formal": "Repository & Dokumentation"
+  },
+  {
+    "context": "",
+    "id": "Requirements shown are preliminary until the stable release is verified.",
+    "de_DE": "Die gezeigten Voraussetzungen sind bis zur Prüfung des stabilen Releases vorläufig.",
+    "de_DE_formal": "Die gezeigten Voraussetzungen sind bis zur Prüfung des stabilen Releases vorläufig."
+  },
+  {
+    "context": "",
+    "id": "Requires PHP %s or newer.",
+    "de_DE": "Benötigt PHP %s oder neuer.",
+    "de_DE_formal": "Benötigt PHP %s oder neuer."
+  },
+  {
+    "context": "",
+    "id": "Requires WordPress %s or newer.",
+    "de_DE": "Benötigt WordPress %s oder neuer.",
+    "de_DE_formal": "Benötigt WordPress %s oder neuer."
+  },
+  {
+    "context": "",
+    "id": "Requires a WordPress Multisite network.",
+    "de_DE": "Benötigt ein WordPress-Multisite-Netzwerk.",
+    "de_DE_formal": "Benötigt ein WordPress-Multisite-Netzwerk."
+  },
+  {
+    "context": "",
+    "id": "Reset filters",
+    "de_DE": "Filter zurücksetzen",
+    "de_DE_formal": "Filter zurücksetzen"
+  },
+  {
+    "context": "",
+    "id": "Retrieve approved catalog updates online",
+    "de_DE": "Katalogfreigaben online aktualisieren",
+    "de_DE_formal": "Katalogfreigaben online aktualisieren"
+  },
+  {
+    "context": "",
+    "id": "Sat",
+    "de_DE": "Sa",
+    "de_DE_formal": "Sa"
+  },
+  {
+    "context": "",
+    "id": "Saturday",
+    "de_DE": "Samstag",
+    "de_DE_formal": "Samstag"
+  },
+  {
+    "context": "",
+    "id": "Save settings",
+    "de_DE": "Einstellungen speichern",
+    "de_DE_formal": "Einstellungen speichern"
+  },
+  {
+    "context": "",
+    "id": "Scripts",
+    "de_DE": "Scripte",
+    "de_DE_formal": "Scripte"
+  },
+  {
+    "context": "",
+    "id": "Search this catalog",
+    "de_DE": "Diesen Katalog durchsuchen",
+    "de_DE_formal": "Diesen Katalog durchsuchen"
+  },
+  {
+    "context": "",
+    "id": "Selected by deckerweb · Installed from GitHub releases",
+    "de_DE": "Von deckerweb ausgewählt · Installation aus GitHub-Releases",
+    "de_DE_formal": "Von deckerweb ausgewählt · Installation aus GitHub-Releases"
+  },
+  {
+    "context": "",
+    "id": "Sep",
+    "de_DE": "Sep",
+    "de_DE_formal": "Sep"
+  },
+  {
+    "context": "",
+    "id": "September",
+    "de_DE": "September",
+    "de_DE_formal": "September"
+  },
+  {
+    "context": "",
+    "id": "Shop",
+    "de_DE": "Shop",
+    "de_DE_formal": "Shop"
+  },
+  {
+    "context": "",
+    "id": "Show deckerweb under Add Plugins",
+    "de_DE": "deckerweb unter „Plugins hinzufügen“ anzeigen",
+    "de_DE_formal": "deckerweb unter „Plugins hinzufügen“ anzeigen"
+  },
+  {
+    "context": "",
+    "id": "Shows plugins whose platform and dependency requirements are met in this site or network. Without this filter, plugins with missing requirements remain visible.",
+    "de_DE": "Zeigt Plugins, deren Plattform- und Abhängigkeitsanforderungen auf dieser Website oder im Netzwerk erfüllt sind. Ohne diesen Filter bleiben Plugins mit fehlenden Voraussetzungen sichtbar.",
+    "de_DE_formal": "Zeigt Plugins, deren Plattform- und Abhängigkeitsanforderungen auf dieser Website oder im Netzwerk erfüllt sind. Ohne diesen Filter bleiben Plugins mit fehlenden Voraussetzungen sichtbar."
+  },
+  {
+    "context": "",
+    "id": "Small plugins. Practical improvements.",
+    "de_DE": "Kleine Plugins. Konkrete Verbesserungen.",
+    "de_DE_formal": "Kleine Plugins. Konkrete Verbesserungen."
+  },
+  {
+    "context": "",
+    "id": "Source: GitHub",
+    "de_DE": "Quelle: GitHub",
+    "de_DE_formal": "Quelle: GitHub"
+  },
+  {
+    "context": "",
+    "id": "Sun",
+    "de_DE": "So",
+    "de_DE_formal": "So"
+  },
+  {
+    "context": "",
+    "id": "Sunday",
+    "de_DE": "Sonntag",
+    "de_DE_formal": "Sonntag"
+  },
+  {
+    "context": "",
+    "id": "The GitHub release could not be downloaded.",
+    "de_DE": "Das GitHub-Release konnte nicht heruntergeladen werden.",
+    "de_DE_formal": "Das GitHub-Release konnte nicht heruntergeladen werden."
+  },
+  {
+    "context": "",
+    "id": "The action is still running. Check its status again.",
+    "de_DE": "Die Aktion läuft noch. Bitte den Status erneut prüfen.",
+    "de_DE_formal": "Die Aktion läuft noch. Bitte den Status erneut prüfen."
+  },
+  {
+    "context": "",
+    "id": "The approved release changed. Refresh updates first.",
+    "de_DE": "Das freigegebene Release hat sich geändert. Bitte zuerst die Updates aktualisieren.",
+    "de_DE_formal": "Das freigegebene Release hat sich geändert. Bitte zuerst die Updates aktualisieren."
+  },
+  {
+    "context": "",
+    "id": "The approved release could not be verified.",
+    "de_DE": "Der freigegebene Release konnte nicht geprüft werden.",
+    "de_DE_formal": "Der freigegebene Release konnte nicht geprüft werden."
+  },
+  {
+    "context": "",
+    "id": "The catalog URL is not an allowed first-party HTTPS endpoint.",
+    "de_DE": "Die Katalog-URL ist keine erlaubte eigene HTTPS-Quelle.",
+    "de_DE_formal": "Die Katalog-URL ist keine erlaubte eigene HTTPS-Quelle."
+  },
+  {
+    "context": "",
+    "id": "The catalog could not be verified. Please try again later.",
+    "de_DE": "Der Katalog konnte nicht geprüft werden. Bitte später erneut versuchen.",
+    "de_DE_formal": "Der Katalog konnte nicht geprüft werden. Bitte später erneut versuchen."
+  },
+  {
+    "context": "",
+    "id": "The catalog is disabled.",
+    "de_DE": "Der Katalog ist deaktiviert.",
+    "de_DE_formal": "Der Katalog ist deaktiviert."
+  },
+  {
+    "context": "",
+    "id": "The catalog is hidden.",
+    "de_DE": "Der Katalog ist ausgeblendet.",
+    "de_DE_formal": "Der Katalog ist ausgeblendet."
+  },
+  {
+    "context": "",
+    "id": "The online catalog is unavailable. Showing cached or bundled entries; online approval is checked again before installation.",
+    "de_DE": "Der Online-Katalog ist nicht erreichbar. Angezeigt wird der gespeicherte oder mitgelieferte Katalog; vor der Installation wird die Online-Freigabe erneut geprüft.",
+    "de_DE_formal": "Der Online-Katalog ist nicht erreichbar. Angezeigt wird der gespeicherte oder mitgelieferte Katalog; vor der Installation wird die Online-Freigabe erneut geprüft."
+  },
+  {
+    "context": "",
+    "id": "The online catalog source is not trusted.",
+    "de_DE": "Die Online-Katalogquelle ist nicht vertrauenswürdig.",
+    "de_DE_formal": "Die Online-Katalogquelle ist nicht vertrauenswürdig."
+  },
+  {
+    "context": "",
+    "id": "The release checksum does not match. Installation stopped.",
+    "de_DE": "Die Prüfsumme des Releases stimmt nicht überein. Installation gestoppt.",
+    "de_DE_formal": "Die Prüfsumme des Releases stimmt nicht überein. Installation gestoppt."
+  },
+  {
+    "context": "",
+    "id": "The request could not be completed. Check the plugin status before trying again.",
+    "de_DE": "Die Anfrage konnte nicht abgeschlossen werden. Vor einem erneuten Versuch den Plugin-Status prüfen.",
+    "de_DE_formal": "Die Anfrage konnte nicht abgeschlossen werden. Vor einem erneuten Versuch den Plugin-Status prüfen."
+  },
+  {
+    "context": "",
+    "id": "The requirements below describe the offered release.",
+    "de_DE": "Die folgenden Voraussetzungen beziehen sich auf den angebotenen Release.",
+    "de_DE_formal": "Die folgenden Voraussetzungen beziehen sich auf den angebotenen Release."
+  },
+  {
+    "context": "",
+    "id": "This catalog requires a newer Library.",
+    "de_DE": "Dieser Katalog benötigt eine neuere Library.",
+    "de_DE_formal": "Dieser Katalog benötigt eine neuere Library."
+  },
+  {
+    "context": "",
+    "id": "This plugin directory already exists. Use the installed plugin; it will not be overwritten.",
+    "de_DE": "Dieses Plugin-Verzeichnis existiert bereits. Bitte das installierte Plugin verwenden; es wird nicht überschrieben.",
+    "de_DE_formal": "Dieses Plugin-Verzeichnis existiert bereits. Bitte das installierte Plugin verwenden; es wird nicht überschrieben."
+  },
+  {
+    "context": "",
+    "id": "This release is no longer approved.",
+    "de_DE": "Dieses Release ist nicht mehr freigegeben.",
+    "de_DE_formal": "Dieses Release ist nicht mehr freigegeben."
+  },
+  {
+    "context": "",
+    "id": "This release is not approved.",
+    "de_DE": "Dieses Release ist nicht freigegeben.",
+    "de_DE_formal": "Dieses Release ist nicht freigegeben."
+  },
+  {
+    "context": "",
+    "id": "Thu",
+    "de_DE": "Do",
+    "de_DE_formal": "Do"
+  },
+  {
+    "context": "",
+    "id": "Thursday",
+    "de_DE": "Donnerstag",
+    "de_DE_formal": "Donnerstag"
+  },
+  {
+    "context": "",
+    "id": "Tools",
+    "de_DE": "Werkzeuge",
+    "de_DE_formal": "Werkzeuge"
+  },
+  {
+    "context": "",
+    "id": "Tue",
+    "de_DE": "Di",
+    "de_DE_formal": "Di"
+  },
+  {
+    "context": "",
+    "id": "Tuesday",
+    "de_DE": "Dienstag",
+    "de_DE_formal": "Dienstag"
+  },
+  {
+    "context": "",
+    "id": "Unsafe archive path.",
+    "de_DE": "Unsicherer Archivpfad.",
+    "de_DE_formal": "Unsicherer Archivpfad."
+  },
+  {
+    "context": "",
+    "id": "Untrusted release URL.",
+    "de_DE": "Nicht vertrauenswürdige Release-URL.",
+    "de_DE_formal": "Nicht vertrauenswürdige Release-URL."
+  },
+  {
+    "context": "",
+    "id": "Update %1$s to version %2$s or newer.",
+    "de_DE": "%1$s bitte auf Version %2$s oder neuer aktualisieren.",
+    "de_DE_formal": "%1$s bitte auf Version %2$s oder neuer aktualisieren."
+  },
+  {
+    "context": "",
+    "id": "View plugins",
+    "de_DE": "Plugins ansehen",
+    "de_DE_formal": "Plugins ansehen"
+  },
+  {
+    "context": "",
+    "id": "Visibility",
+    "de_DE": "Sichtbarkeit",
+    "de_DE_formal": "Sichtbarkeit"
+  },
+  {
+    "context": "",
+    "id": "Wed",
+    "de_DE": "Mi",
+    "de_DE_formal": "Mi"
+  },
+  {
+    "context": "",
+    "id": "Wednesday",
+    "de_DE": "Mittwoch",
+    "de_DE_formal": "Mittwoch"
+  },
+  {
+    "context": "",
+    "id": "WordPress",
+    "de_DE": "WordPress",
+    "de_DE_formal": "WordPress"
+  },
+  {
+    "context": "",
+    "id": "You already use one of my plugins. Find selected additions in the deckerweb tab.",
+    "de_DE": "Du nutzt bereits ein Plugin von mir. Ausgewählte Ergänzungen findest du im deckerweb-Tab.",
+    "de_DE_formal": "Sie nutzen bereits ein Plugin von mir. Ausgewählte Ergänzungen finden Sie im deckerweb-Tab."
+  }
+]

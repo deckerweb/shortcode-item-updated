@@ -1,0 +1,74 @@
+[
+  {
+    "file": "dunkel-oben-de-github.svg",
+    "native_vector": true,
+    "raster_images": 0,
+    "external_resources": 0,
+    "filters": 0,
+    "typography": "outlined Montserrat",
+    "background": "native radial gradient"
+  },
+  {
+    "file": "dunkel-oben-en-github.svg",
+    "native_vector": true,
+    "raster_images": 0,
+    "external_resources": 0,
+    "filters": 0,
+    "typography": "outlined Montserrat",
+    "background": "native radial gradient"
+  },
+  {
+    "file": "dunkel-unten-en-wp.svg",
+    "native_vector": true,
+    "raster_images": 0,
+    "external_resources": 0,
+    "filters": 0,
+    "typography": "outlined Montserrat",
+    "background": "native radial gradient"
+  },
+  {
+    "file": "dunkel-oben-de-wp.svg",
+    "native_vector": true,
+    "raster_images": 0,
+    "external_resources": 0,
+    "filters": 0,
+    "typography": "outlined Montserrat",
+    "background": "native radial gradient"
+  },
+  {
+    "file": "dunkel-unten-de-wp.svg",
+    "native_vector": true,
+    "raster_images": 0,
+    "external_resources": 0,
+    "filters": 0,
+    "typography": "outlined Montserrat",
+    "background": "native radial gradient"
+  },
+  {
+    "file": "dunkel-oben-en-wp.svg",
+    "native_vector": true,
+    "raster_images": 0,
+    "external_resources": 0,
+    "filters": 0,
+    "typography": "outlined Montserrat",
+    "background": "native radial gradient"
+  },
+  {
+    "file": "dunkel-unten-en-github.svg",
+    "native_vector": true,
+    "raster_images": 0,
+    "external_resources": 0,
+    "filters": 0,
+    "typography": "outlined Montserrat",
+    "background": "native radial gradient"
+  },
+  {
+    "file": "dunkel-unten-de-github.svg",
+    "native_vector": true,
+    "raster_images": 0,
+    "external_resources": 0,
+    "filters": 0,
+    "typography": "outlined Montserrat",
+    "background": "native radial gradient"
+  }
+]

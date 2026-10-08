@@ -3,17 +3,5 @@
 
 @import "{{ site.theme }}";
 
-.page-header {
-  background-color: #C86DD7;
-  background-image: linear-gradient(120deg, #3023AE, #C86DD7);
-}
-
-.main-content h1,
-.main-content h2,
-.main-content h3,
-.main-content h4,
-.main-content h5,
-.main-content h6 {
-  font-weight: 700;
-  color: #C86DD7;
-}
+.page-header { background-color: #0d2337; background-image: linear-gradient(120deg, #0d2337, #45878a); }
+.main-content h1, .main-content h2, .main-content h3, .main-content h4 { font-weight: 700; color: #32696c; }

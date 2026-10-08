@@ -1,0 +1,2 @@
+const fs=require('fs'),path=require('path'),sharp=require('sharp');
+(async()=>{const dir=path.resolve(__dirname,'..','assets');for(const file of fs.readdirSync(dir).filter(f=>f.endsWith('.svg'))){const src=fs.readFileSync(path.join(dir,file));if(file==='icon.svg'){for(const size of [128,256])await sharp(src).resize(size,size).png().toFile(path.join(dir,`icon-${size}x${size}.png`));}else await sharp(src).png().toFile(path.join(dir,file.replace('.svg','.png')));}})();

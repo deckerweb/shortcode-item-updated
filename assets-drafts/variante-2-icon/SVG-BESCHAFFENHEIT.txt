@@ -1,0 +1,1 @@
+Originäre Vektorgrafik: Rechtecke, Pfade, Gruppen und native SVG-Farbverläufe. Keine Rasterbilder, Einbettungen, Filter, Schriftdateien oder externen Ressourcen. Motiv aus der freigegebenen Variante 2 für das quadratische Format gesetzt; etwas stärkere Striche für kleine Darstellung.
